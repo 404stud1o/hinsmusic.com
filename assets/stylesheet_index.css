@@ -1,0 +1,167 @@
+/* Style Settings */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Bebas Neue, sans-serif;
+    line-height: 1.25;
+    max-height: 100vh;
+    letter-spacing: 1.5px;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #154656;
+    color: #ffffff;
+    padding: 0px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    padding: 18px 0;
+    
+    /* Dropdown Button */
+    .dropbtn {
+        background-color: transparent;
+        color: #ffffff;
+        padding: 0px;
+        font-family: Bebas Neue, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        line-height: 1.5;
+        letter-spacing: 1.5px;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        font-size: 14px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        background-color: #154656;
+        text-decoration: none;
+        display: none;
+        position: absolute;
+        min-width: auto;
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: #ffffff;
+        background-color: #154656;
+        padding: 10px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #154656;
+        color: #F69F38;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        background-color: #154656; 
+        color: #F69F38;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    transition: text-shadow 0.3s ease;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #F69F38;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-h1 {
+    font-weight: bold;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #154656;
+    text-align: center;
+    gap: 0;
+    min-height: 95vh;
+
+    background-image: url(''); 
+    background-size: auto 250%; /* Makes the iframe cover the entire background */
+    background-position: center; /* Centers the iframe */
+    background-repeat: no-repeat; /* Prevents the iframe from repeating */
+
+}
+
+a.header-h1 {
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.content {
+    font-family: Noto Sans HK, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    color: #ffffff;
+    background-color: #154656;
+    text-align: left;
+    padding: 8px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #154656;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 0;
+    width: 100%;
+    bottom: 0;
+    position: static;
+}
