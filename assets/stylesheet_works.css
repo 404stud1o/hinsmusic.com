@@ -131,7 +131,7 @@ nav {
     /* Change color of dropdown links on hover */
     .dropdown-content a:hover {
         background-color: #FF573D;
-        color: #21C4B6;
+        color: #C8974E;
     }
 
     /* Show the dropdown menu on hover */
@@ -140,7 +140,7 @@ nav {
     /* Change the background color of the dropdown button when the dropdown content is shown */
     .dropdown:hover .dropbtn {
         background-color: #FF573D; 
-        color: #21C4B6;
+        color: #C8974E;
     }
 }
 
@@ -163,7 +163,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #21C4B6;
+    color: #C8974E;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
