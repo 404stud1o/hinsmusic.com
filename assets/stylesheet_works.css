@@ -92,10 +92,10 @@ nav {
         color: #ffffff;
         padding: 0px;
         font-family: Bebas Neue, sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
         border: none;
-        line-height: 1.5;
+        line-height: 1.25;
         letter-spacing: 1.5px;
     }
 
@@ -107,7 +107,7 @@ nav {
 
     /* Dropdown Content (Hidden by Default) */
     .dropdown-content {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
         color: #ffffff;
         text-align: center;
@@ -158,7 +158,7 @@ nav ul li a {
     color: #ffffff;
     transition: text-shadow 0.3s ease;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
 }
 
@@ -196,7 +196,7 @@ a.header-h1 {
 
 .content {
     font-family: Noto Sans HK, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
     margin: 0;
     color: #ffffff;
@@ -218,7 +218,7 @@ a.header-h1 {
 
 .desc-text {
     font-family: Noto Sans HK, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
     margin: 0;
     color: #ffffff;
@@ -267,7 +267,7 @@ hr.solid {
     color: #ffd54f; /* White text */
     text-decoration: none; /* Remove underline */
     border-radius: 5px; /* Rounded corners */
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -288,7 +288,7 @@ footer {
     background-color: #FF573D;
     color: #ffffff;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     padding: 15px 0;
     width: 100%;
