@@ -1,352 +1,156 @@
 <!DOCTYPE html>
 <html lang="en_HK">
-<head>
-    <title>肥馬騮製作有限公司 Fat Monkey Productions Limited</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="generator" content="Square Online">
-    <link rel="shortcut icon" type="image/x-icon" href="/HCFC.ico">
+    <head>
+        <title>Fat Monkey Productions Limited</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="generator" content="Square Online">
+        <link rel="shortcut icon" type="image/x-icon" href="/HCFC.ico">
 
-    <style>
-        .loading-view {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 100;
-        }
-
-        .loading-container {
-            width: 62px;
-            height: 54px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 12px;
-        }
-
-        @media (min-width: 840px) {
-            .loading-container {
-                width: 72px;
-                height: 54px;
-                grid-gap: 12px;
-            }
-        }
-
-        .dot-container {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(#ff9f3c20, #ff9f3c);
-            /* Base64 encoded simple circle SVG /resources/assets/js/prime/src/site/components/ui/circle.svg */
-            mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xIC0xIDIgMiI+Cgk8Y2lyY2xlIHI9IjEiLz4KPC9zdmc+Cg==');
-            -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xIC0xIDIgMiI+Cgk8Y2lyY2xlIHI9IjEiLz4KPC9zdmc+Cg==');
-            mask-repeat: no-repeat;
-            -webkit-mask-repeat: no-repeat;
-            mask-size: 100% auto;
-            -webkit-mask-size: 100% auto;
-            mask-position: bottom;
-            -webkit-mask-position: bottom;
-            animation: loading-view-movement;
-            animation-delay: 0s;
-            animation-duration: 3750ms;
-            animation-iteration-count: infinite;
-            animation-timing-function: cubic-bezier(0.8, 0, 0.8, 1);
-        }
-
-        .dot-container:nth-of-type(2) {
-            animation-delay: 130ms;
-        }
-
-        .dot-container:nth-of-type(3) {
-            animation-delay: 260ms;
-        }
-
-        @keyframes loading-view-movement {
-            /* up and down for 3s, stop for 750ms */
-            0%, 27%, 54% {
-                mask-position: bottom;
-                -webkit-mask-position: bottom;
-            }
-
-            14%, 41%, 68% {
-                mask-position: top;
-                -webkit-mask-position: top;
-            }
-
-            27%, 54%, 81%, 100% {
-                mask-position: bottom;
-                -webkit-mask-position: bottom;
-            }
-        }
-    </style>
-
-            <link rel="manifest" href="/manifest.webmanifest">
-            <meta name="apple-mobile-web-app-capable" content="yes">
-            <meta name="apple-mobile-web-app-status-bar-style" content="default">
-            <meta name='apple-mobile-web-app-title' content='404 Studio'>
-            <meta name='theme-color' content='#ff9f3c'>
-            <meta name='msapplication-TileColor' content='#ff9f3c'>
-            <link rel='apple-touch-icon' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=180'>
-            <meta name='msapplication-TileImage' content='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=144'>
-            <link rel='apple-touch-icon' sizes='120x120' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=120'>
-            <link rel='apple-touch-icon' sizes='152x152' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=152'>
-            <link rel='apple-touch-icon' sizes='167x167' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=167'>
-            <link rel='apple-touch-icon' sizes='180x180' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=180'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=750&height=1334&fit=crop' media='(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1242&height=2208&fit=crop' media='(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1125&height=2436&fit=crop' media='(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=828&height=1792&fit=crop' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1242&height=2688&fit=crop' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1170&height=2532&fit=crop' media='(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1284&height=2778&fit=crop' media='(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1536&height=2048&fit=crop' media='(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1620&height=2160&fit=crop' media='(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1668&height=2224&fit=crop' media='(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1668&height=2388&fit=crop' media='(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)'>
-            <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=2048&height=2732&fit=crop' media='(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)'>
-    
-                        <script src="https://consent.cookiebot.com/uc.js" data-cbid="bcb292c0-30c9-4446-8271-409085d9b693" data-framework="TCFv2.2" data-blockingmode="auto">
-</script>
-            
-    
-        <script defer src="https://cdn3.editmysite.com/app/checkout/assets/checkout/system.c3b89b0b94f4ef0671b1.js" data-cookieconsent="ignore"></script>
-    
-    
-        <script type="systemjs-importmap" src="https://cdn3.editmysite.com/app/checkout/assets/checkout/imports.en.aea3933176561e32.js" data-cookieconsent="ignore"></script>
-    
-    
-            <script type="systemjs-importmap" src="https://cdn3.editmysite.com/app/checkout/assets/checkout/locale-imports-map.5f6fbff5dca7e7b9.json" data-cookieconsent="ignore"></script>
-    
-    
-    <script defer type="text/javascript" src="https://cdn3.editmysite.com/app/website/js/runtime.d7d56bb8a8c4a71e57c2.js" data-cookieconsent="ignore"></script>
-    <script defer type="text/javascript" src="https://cdn3.editmysite.com/app/website/js/vue-modules.4a41b3ba298bf4563d97.js" data-cookieconsent="ignore"></script>
-    <script defer type="text/javascript" src="https://cdn3.editmysite.com/app/website/js/languages/en_GB.85bfbcff0471a07874bf.js" data-cookieconsent="ignore"></script>
-    <script defer type="text/javascript" src="https://cdn3.editmysite.com/app/website/js/site.cedc8238ad335eb184ea.js" data-cookieconsent="ignore"></script>
-
-        <meta name="description" content="an extraordinarily typical virgo &amp; istp.">
-    
-    <meta property="og:title" content="Henry L | 404 Studio" />
-                <meta property="og:site_name" content="404 Studio" />
-                <meta property="og:description" content="an extraordinarily typical virgo &amp; istp." />
-                <meta property="og:image" content="https://404stud1o.square.site/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/logo_v2_banner.png" />
-                <meta property="og:url" content="https://404stud1o.square.site" />
-        <meta property="og:type" content="website" />
-    
-    <script data-cookieconsent="ignore">
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-    </script>
-
-            <!-- Global Site Tag (gtag.js) - Google Analytics -->
-	<script async="async" data-cookieconsent="statistics, marketing" src="https://www.googletagmanager.com/gtag/js?id=G-WMLXGSBSY0" type="text/plain">
-    
-</script>
-<script data-cookieconsent="statistics" type="text/plain">
-    window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	// Note we don't include the gtag config here as it's triggered in PublishedApp.vue
-	// and would otherwise cause double page view events on load
-	gtag('js', new Date());
-	gtag('set', 'developer_id.dOTM2Yj', true)
-</script>
-
-
-
-    
-    <!--square-online-feature-flags-->
-<script type="application/javascript" data-cookieconsent="ignore" data-role="square-online-featureflags">
-    window.__DYNAMIC_BOOTSTRAP__ ??= {};
-
-    Object.assign(window.__DYNAMIC_BOOTSTRAP__, {
-        featureFlags: {"ecom.website.deprecated-layouts":false,"marketing-enable-drive-repeat-purchase-campaign":true,"ecom.website.facebook-food":true,"ecom.website.theme-export":false,"ecom.website.chamber-via-fastly":true,"ecom.square-online-published-catalog-cache-version":"2026-03-25","ecom.checkout.open_tabs":true,"ecom.website.photo-reviews":true,"ecom.checkout.cmi-sentry-integration":true,"ecom.checkout.cmi.bootstrap-tracking-snowplow":true,"ecom.checkout.cmi.bootstrap-tracking-ga":true,"ecom.website.order-confirmation-page.website-redirect":true,"ecom.checkout.cmi.locale-view-splitting":true,"ecom.checkout.open_tabs_gc_coupon":true,"ecom.cmi-cart":true,"ecom.checkout.cmi.theme-fonts":false,"ecom-fulfillment-api-v-2":false,"ecom.omnichannel-discounts-frontend":true,"ecom.omnichannel-discounts-category-api":false,"ecom-improved-tipping-experience":true,"ecom.splash.loyalty":false,"ecom.website.published-site.datadog-rum":true,"ecom.website.editor.datadog-rum":true,"ecom-website-published-site-datadog-rum-bot-filter":true,"ecom-use-tracking-inventory":false,"ecom.image-controls.width-fix":true,"ecom.gradient-backgrounds":true,"ecom.website.form-fraud-blocking":true,"ecom.website.form-fraud-auto-ban":true,"ecom.website.code-editor":false,"ecom.shopping.pdp-layouts-m1":true,"ecom.chamber.subscriptions":true,"ecom.tuba.subscriptions-paid-shipping-rates":true,"ecom-cko-enhanced-logging":true,"ecom-cko-unified-logging":true,"ecom.shopping.so-coupons-sunset-integrations":true,"ecom.order-online-text-layouts":true,"ecom.appointment-improvements":true,"ecom.appointment-improvements-m2":true,"ecom.tuba.committed-inventory-m1":true,"ecom.splash-improvements":true,"ecom-themes-onboarding":true,"ecom.shopping.featured-categories-paid-layouts":true,"ecom.website.ai-text.short-form":false,"ecom.website.ai-text.long-form":false,"ecom.website.metered-request.override":false,"ecom.website.async-create-theme":false,"ecom.can_use_cart_sharing":true,"ecom.website.ai.editor-prototype":false,"ecom.website.ai.page-seo":false,"ecom.appointment-direct-booking":true,"ecom-service-cutover-fe-request-augmentations":true,"ecom.catalog.so-item-library-deprecation-3":true,"ecom.kiosk-photo-card":true,"ecom.website.system-page.cart":false,"ecom-enable-kiosk-large-catalog-layout":false,"ecom-hide-instagram":true,"ecom-hide-instagram-on-published-sites":false,"ecom-enable-kiosk-item-preloading":true,"ecom-brand-api-sync":true,"ecom.service-cutover.enable-tuba-traffic":true,"ecom-show-order-online":true,"websdk-use-new-afterpay-buttons":false,"ecom-checkout-should-check-is-decouple-checkout":true,"ecom-prime-use-store-info-v29":true,"ecom-checkout-force-pci-compliance":false,"ecom-website-hide-food-beverage-themes":false,"ecom-website-fix-dine-in-location-selection":true,"ecom-combo-slot-include-hidden-items":false},
-    });
-</script>
-<!--end-square-online-feature-flags-->
-
-    <script type="application/javascript" data-cookieconsent="ignore">
-        window.__BOOTSTRAP_STATE__ = {"siteData":{"site":{"id":"e5761de0-8027-11ee-875d-d98ab2565f71","properties":{"classicSiteID":"105989062428052294","catalogSiteId":"332284171635836983","selectedVertical":"other","verticalV4":"charity-event","language":"en_GB","squareMerchantId":"MLYMFV419512F","siteCatalogVersion":"e37c9c0a-1e8a-436c-82c9-bbe5e658b935","appSiteCartNativePayControlGroup":false,"appSiteCartNativePayTestGroup":false,"isKioskSite":false,"squareSyncUserId":"c9aeb9fc-7b4b-4646-a9ba-901d07884e7f","isServiceCutoverEnabled":true,"skippedItemSync":false,"migratedSquareOnlineSiteToMenus":false,"blockFtux":{"blog-header":["ftux-alert"],"product-detail":["ftux-alert"]},"onboarded":{"guidance":{"version":"1","complete":true,"welcomeComplete":true,"instagramMiniSiteTipDismissed":true,"guidanceMobileTrafficDismissedCount":3},"backendOnboarding":true,"isSiteDesignOnboarded":true,"isVideoBannerAnnouncementDismissed":true,"isCustomizationDiscoverabilityDismissed":true},"publishedAt":1775269700,"completedFtux":{"INSTAGRAM_FEATURE_EXPLAINED":true},"site_versions":{"editor":{"v0":"e5bc3b00-8027-11ee-9925-358633622b8f","v1":"79171610-802c-11ee-a1ed-17babc3a3dd2","v2":"79229d80-802c-11ee-b902-578d7099f1a3","v3":"792e44b0-802c-11ee-af7f-fb67d752e6d0","v4":"79398810-802c-11ee-aef4-a1927dd1644c","v5":"7943ab60-802c-11ee-b009-d12eb0a28073","v6":"79531c80-802c-11ee-b1c7-37fc10aaf3e3","v7":"795e7ad0-802c-11ee-8aca-57e4fc9ff06b","v8":"796cb9d0-802c-11ee-9b4f-0fb9b9341f4b"}},"cookieManagement":{"type":"cookiebot","config":{"cbid":"bcb292c0-30c9-4446-8271-409085d9b693"}},"dismissedNotices":{"autoEnrolledCookiebotNotice":true},"siteIconSettings":{"updatedAt":1732657301,"splash_images":{"config":{"size":"2048","radius":0,"fontPath":"\/var\/www\/public\/static\/fonts\/Comfortaa\/comfortaa-v40-latin-700.woff","iconType":"free","imageUrl":null,"language":"en_GB","siteTitle":"404 Studio","customColor":"#ff9f3c","primaryColor":"#ff9f3c","contrastColor":"#000000"},"2048x4435":"\/uploads\/b\/e5761de0-8027-11ee-875d-d98ab2565f71\/splash_2048x4435_MTAwNj.jpg"},"ios_icon_images":{"config":{"size":"180","radius":0,"fontPath":"\/var\/www\/public\/static\/fonts\/Comfortaa\/comfortaa-v40-latin-700.woff","iconType":"free","imageUrl":null,"language":"en_GB","siteTitle":"404 Studio","customColor":"#ff9f3c","primaryColor":"#ff9f3c","contrastColor":"#000000"},"180x180":"\/uploads\/b\/e5761de0-8027-11ee-875d-d98ab2565f71\/icon_180x180_ios_NjI3Nz.png"},"android_icon_images":{"config":{"size":"512","radius":256,"fontPath":"\/var\/www\/public\/static\/fonts\/Comfortaa\/comfortaa-v40-latin-700.woff","iconType":"free","imageUrl":null,"language":"en_GB","siteTitle":"404 Studio","customColor":"#ff9f3c","primaryColor":"#ff9f3c","contrastColor":"#000000"},"512x512":"\/uploads\/b\/e5761de0-8027-11ee-875d-d98ab2565f71\/icon_512x512_android_ODEyMj.png"}},"selectedDeviceView":"desktop","manageQrCodeClicked":true,"order_fulfillment_guides":"neither","domain":{"custom_domain":"","subdomain":"404stud1o.square.site","site_id":105989062428052294}}},"pagesMeta":[{"id":"f2651e40-2fcd-11f1-9493-058b4d3180dd","name":"Year Of 2023","route":"mus-2023-demos","title":"Year Of 2023","featureType":null,"description":"","hidden":false},{"id":"f262d6e0-2fcd-11f1-b46f-cd6b7760f0e6","name":"Qualifications","route":"qualifications","title":"Qualifications","featureType":null,"description":"","hidden":false},{"id":"f262a350-2fcd-11f1-aa30-0fd5c324c1fa","name":"Music","route":"music","title":"Music","featureType":null,"description":"","hidden":false},{"id":"f263d580-2fcd-11f1-9693-fbb180518960","name":"Participated Works","route":"mus-works","title":"Releases","featureType":null,"description":"","hidden":true},{"id":"f25f94c0-2fcd-11f1-a644-3bb0bb8a8023","name":"Remixes & Mashups","route":"mus-remixes","title":"Remixes","featureType":null,"description":"","hidden":false},{"id":"f264d870-2fcd-11f1-8539-81b4c6fd1657","name":"Hertz-HZT Demo Collection","route":"mus-hzt-demos","title":"Hertz-HZT","featureType":null,"description":"","hidden":true},{"id":"f2637b70-2fcd-11f1-9331-573449a094f1","name":"Hertz-HZT","route":"mus-hertzhzt","title":"Hertz-HZT","featureType":null,"description":"","hidden":false},{"id":"f2649a30-2fcd-11f1-8574-5fc6e30d66e8","name":"#H: (Series)","route":"mus-h-series","title":"Series - Hollow","featureType":null,"description":"","hidden":false},{"id":"f2659e90-2fcd-11f1-aa21-5b204031d462","name":"Music Demos","route":"mus-demos","title":"Demos","featureType":null,"description":"","hidden":false},{"id":"f2621c00-2fcd-11f1-bc42-f5efa44db6c1","name":"Music Covers","route":"mus-covers","title":"Covers","featureType":null,"description":"","hidden":false},{"id":"f25fda00-2fcd-11f1-a7f1-f52cda07fc70","name":"Year Of 2026","route":"mus-2026-demos","title":"Year Of 2026","featureType":null,"description":"","hidden":false},{"id":"f261b180-2fcd-11f1-a42a-7f6be0eb12db","name":"Year Of 2025","route":"mus-2025-demos","title":"Year Of 2025","featureType":null,"description":"","hidden":false},{"id":"f2644f10-2fcd-11f1-9f42-7186c7fc87f6","name":"Year Of 2024","route":"mus-2024-demos","title":"Year Of 2024","featureType":null,"description":"","hidden":false},{"id":"f2631760-2fcd-11f1-a2fc-5945d6283144","name":"About","route":"about","title":"About","featureType":null,"description":"","hidden":false},{"id":"f2655dd0-2fcd-11f1-8967-3d561ee0dac7","name":"Year Of 2022","route":"mus-2022-demos","title":"Year Of 2022","featureType":null,"description":"","hidden":false},{"id":"f2624da0-2fcd-11f1-8057-a18ed2a3de52","name":"Instagram Feed","route":"instagram","title":"Instagram","featureType":null,"description":"","hidden":true},{"id":"f2600560-2fcd-11f1-8f28-ddc26ba30a68","name":"\u51ac\u5b63\u9650\u5b9a Hush (\u7d55\u5c0d\u96f6\u5ea6\u7248 0K Version)","route":"hush-0kver","title":"\u51ac\u5b63\u9650\u5b9a (\u96f6\u5ea6\u7248 0K Version)","featureType":null,"description":"","hidden":false},{"id":"f265e3d0-2fcd-11f1-a726-9198d201cf7f","name":"Home","route":"home","title":"Home","featureType":null,"description":"","hidden":false},{"id":"f260cc40-2fcd-11f1-8e9f-63b942b5efb6","name":"#\u5f48\u5440\u5f48\u5587\u5582\ud83c\udfb9 Let's Play Piano with Hins & Terence!","route":"himn-orig-pno","title":"#\u5f48\u5440\u5f48\u5587\u5582\ud83c\udfb9 Let's Play Piano with Hins & Terence!","featureType":null,"description":"","hidden":false},{"id":"f25f5100-2fcd-11f1-914d-9d990abd3573","name":"Personal Projects","route":"eng-pers-proj","title":"Personal Projects","featureType":null,"description":"","hidden":false},{"id":"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9","name":"Academic Projects","route":"eng-acad-proj","title":"Engineering Projects","featureType":null,"description":"","hidden":false},{"id":"f261edf0-2fcd-11f1-a760-3d4c5aaa5e3f","name":"Engineering","route":"eng","title":"Electronics & Engineering","featureType":null,"description":"","hidden":true},{"id":"f2640ee0-2fcd-11f1-b6cf-b334c4c84077","name":"Contact","route":"contact","title":"Contact Us","featureType":null,"description":"","hidden":false},{"id":"f2608970-2fcd-11f1-bf75-8d9774c5e974","name":"By my side (404 lo-fi remix)","route":"bymyside-remix","title":"By my side (404 lo-fi mix)","featureType":null,"description":"","hidden":false},{"id":"f2604a40-2fcd-11f1-8432-09dec9bdc6e1","name":"By my side (Piano Version)","route":"by-my-side-piano-version","title":"By my side (Piano Version)","featureType":null,"description":"","hidden":false}],"customPagesMeta":[],"artifactsMeta":[],"snapshot":{"id":"f25e61b0-2fcd-11f1-b46e-299b98e959e5","site_id":"e5761de0-8027-11ee-875d-d98ab2565f71","properties":{"seo":{"page":{"f25f5100-2fcd-11f1-914d-9d990abd3573":{"title":"Personal Projects","description":""},"f25f94c0-2fcd-11f1-a644-3bb0bb8a8023":{"title":"Remixes & Mashups","description":""},"f25fda00-2fcd-11f1-a7f1-f52cda07fc70":{"title":"Demos - Year Of 2026","description":""},"f2600560-2fcd-11f1-8f28-ddc26ba30a68":{"title":"\u51ac\u5b63\u9650\u5b9a (\u96f6\u5ea6\u7248 0K Version)","description":""},"f2604a40-2fcd-11f1-8432-09dec9bdc6e1":{"title":"By my side (Piano Version)","description":""},"f2608970-2fcd-11f1-bf75-8d9774c5e974":{"title":"By my side (404 lo-fi remix) by Henry L","description":""},"f260cc40-2fcd-11f1-8e9f-63b942b5efb6":{"title":"#\u5f48\u5440\u5f48\u5587\u5582\ud83c\udfb9 Let's Play Piano with Hins & Terence!","description":""},"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9":{"title":"Engineering - Academic Projects","description":""},"f261b180-2fcd-11f1-a42a-7f6be0eb12db":{"title":"Demos - Year Of 2025","description":""},"f261edf0-2fcd-11f1-a760-3d4c5aaa5e3f":{"title":"Electronics & Engineering","description":""},"f2621c00-2fcd-11f1-bc42-f5efa44db6c1":{"title":"Covers","description":""},"f2624da0-2fcd-11f1-8057-a18ed2a3de52":{"title":"Instagram Feed","description":""},"f2631760-2fcd-11f1-a2fc-5945d6283144":{"title":"About","description":""},"f2637b70-2fcd-11f1-9331-573449a094f1":{"title":"Hertz-HZT","description":""},"f263d580-2fcd-11f1-9693-fbb180518960":{"title":"Participated Works","description":""},"f2640ee0-2fcd-11f1-b6cf-b334c4c84077":{"title":"Contact","description":""},"f2644f10-2fcd-11f1-9f42-7186c7fc87f6":{"title":"Demos - Year Of 2024","description":""},"f2649a30-2fcd-11f1-8574-5fc6e30d66e8":{"title":"#H:","description":""},"f264d870-2fcd-11f1-8539-81b4c6fd1657":{"title":"Hertz-HZT","description":""},"f2651e40-2fcd-11f1-9493-058b4d3180dd":{"title":"Demos - Year Of 2023","description":""},"f2655dd0-2fcd-11f1-8967-3d561ee0dac7":{"title":"Demos - Year Of 2022","description":""},"f2659e90-2fcd-11f1-aa21-5b204031d462":{"title":"Demos","description":""},"f265e3d0-2fcd-11f1-a726-9198d201cf7f":{"title":"Henry L","description":"an extraordinarily typical virgo & istp."}},"story":{},"template":{"storiesOverview":{"title":"Stories & Updates","description":""}}},"logo":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/logo_v2-coloured_1x1_transparent_1699662175.png","color":{"primaryColor":"#ff9f3c","secondaryColors":[{"id":"--color-secondary-rYvSqO","value":"#9cd435"},{"id":"--color-secondary-zAGKrt","value":"#7ac4ed"},{"id":"--color-secondary-nVECTr","value":"#a3a2aa"},{"id":"--color-secondary-HTAOXr","value":"#00ff00"},{"id":"--color-secondary-BKcYkC","value":"#ecec3b"},{"id":"--color-secondary-VjHlqI","value":"#ff2699"},{"id":"--color-secondary-NYUwJC","value":"#fa5300"}],"siteColorProfile":"custom-profile"},"fonts":{"fontSize":{"scale":1.147,"baseSize":15}},"title":"404 Studio","shapes":{"cardBorderRadius":"8px","imageBorderRadius":"16px","buttonBorderRadius":"100px","defaultBorderRadius":"8px"},"social":[{"icon":"email","user":"hli.404stud1o@gmail.com","selected":true},{"icon":"facebook","user":"404stud1o","selected":true},{"icon":"instagram","user":"404stud1o_","selected":true},{"icon":"linkedin","user":"in\/henry404x","selected":true},{"icon":"pinterest","user":"","selected":false},{"icon":"snapchat","user":"","selected":false},{"icon":"tiktok","user":"","selected":false},{"icon":"twitter","user":"404stud1o","selected":true},{"icon":"vimeo","user":"","selected":false},{"icon":"yelp","user":"","selected":false},{"icon":"youtube","user":"@404stud1o","selected":true}],"fontset":{"name":"sqmarket","version":"0.1.0","overrides":{}},"fontPair":{"id":"comfortaa--larsseit"},"homepage":{"type":"page","typeID":"f265e3d0-2fcd-11f1-a726-9198d201cf7f"},"routeMap":{"":"f265e3d0-2fcd-11f1-a726-9198d201cf7f","eng":"f261edf0-2fcd-11f1-a760-3d4c5aaa5e3f","home":"f265e3d0-2fcd-11f1-a726-9198d201cf7f","about":"f2631760-2fcd-11f1-a2fc-5945d6283144","music":"f262a350-2fcd-11f1-aa30-0fd5c324c1fa","contact":"f2640ee0-2fcd-11f1-b6cf-b334c4c84077","instagram":"f2624da0-2fcd-11f1-8057-a18ed2a3de52","mus-demos":"f2659e90-2fcd-11f1-aa21-5b204031d462","mus-works":"f263d580-2fcd-11f1-9693-fbb180518960","hush-0kver":"f2600560-2fcd-11f1-8f28-ddc26ba30a68","mus-covers":"f2621c00-2fcd-11f1-bc42-f5efa44db6c1","mus-remixes":"f25f94c0-2fcd-11f1-a644-3bb0bb8a8023","mus-h-series":"f2649a30-2fcd-11f1-8574-5fc6e30d66e8","mus-hertzhzt":"f2637b70-2fcd-11f1-9331-573449a094f1","eng-acad-proj":"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9","eng-pers-proj":"f25f5100-2fcd-11f1-914d-9d990abd3573","himn-orig-pno":"f260cc40-2fcd-11f1-8e9f-63b942b5efb6","mus-hzt-demos":"f264d870-2fcd-11f1-8539-81b4c6fd1657","bymyside-remix":"f2608970-2fcd-11f1-bf75-8d9774c5e974","mus-2022-demos":"f2655dd0-2fcd-11f1-8967-3d561ee0dac7","mus-2023-demos":"f2651e40-2fcd-11f1-9493-058b4d3180dd","mus-2024-demos":"f2644f10-2fcd-11f1-9f42-7186c7fc87f6","mus-2025-demos":"f261b180-2fcd-11f1-a42a-7f6be0eb12db","mus-2026-demos":"f25fda00-2fcd-11f1-a7f1-f52cda07fc70","qualifications":"f262d6e0-2fcd-11f1-b46f-cd6b7760f0e6","by-my-side-piano-version":"f2604a40-2fcd-11f1-8432-09dec9bdc6e1"},"styleset":{"name":"square","version":"0.1.0"},"trackers":{"googleAnalyticsID":"G-WMLXGSBSY0","googleVerification":""},"framework":{"name":"birdseye","version":"0.1.0"},"onboarded":false,"openGraph":{"page":{"f25f5100-2fcd-11f1-914d-9d990abd3573":{"title":"Personal Projects","description":""},"f25f94c0-2fcd-11f1-a644-3bb0bb8a8023":{"title":"Remixes & Mashups","description":""},"f25fda00-2fcd-11f1-a7f1-f52cda07fc70":{"title":"Demos - Year Of 2026","description":""},"f2600560-2fcd-11f1-8f28-ddc26ba30a68":{"image":"\/uploads\/b\/e5761de0-8027-11ee-875d-d98ab2565f71\/cover_art_winter0k.png","title":"\u51ac\u5b63\u9650\u5b9a (\u96f6\u5ea6\u7248 0K Version)","description":""},"f2604a40-2fcd-11f1-8432-09dec9bdc6e1":{"image":"\/uploads\/b\/e5761de0-8027-11ee-875d-d98ab2565f71\/By%20my%20side%20(404%20lo-fi%20remix).png","title":"By my side (Piano Version)","description":""},"f2608970-2fcd-11f1-bf75-8d9774c5e974":{"image":"\/uploads\/b\/e5761de0-8027-11ee-875d-d98ab2565f71\/By%20my%20side%20(404%20lo-fi%20remix).png","title":"By my side (404 lo-fi remix) by Henry L","description":""},"f260cc40-2fcd-11f1-8e9f-63b942b5efb6":{"title":"#\u5f48\u5440\u5f48\u5587\u5582\ud83c\udfb9 Let's Play Piano with Hins & Terence!","description":""},"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9":{"title":"Engineering - Academic Projects","description":""},"f261b180-2fcd-11f1-a42a-7f6be0eb12db":{"title":"Demos - Year Of 2025","description":""},"f261edf0-2fcd-11f1-a760-3d4c5aaa5e3f":{"title":"Electronics & Engineering","description":""},"f2621c00-2fcd-11f1-bc42-f5efa44db6c1":{"title":"Covers","description":""},"f2624da0-2fcd-11f1-8057-a18ed2a3de52":{"title":"Instagram Feed","description":""},"f2631760-2fcd-11f1-a2fc-5945d6283144":{"title":"About","description":""},"f2637b70-2fcd-11f1-9331-573449a094f1":{"title":"Hertz-HZT","description":""},"f263d580-2fcd-11f1-9693-fbb180518960":{"title":"Participated Works","description":""},"f2640ee0-2fcd-11f1-b6cf-b334c4c84077":{"title":"Contact","description":""},"f2644f10-2fcd-11f1-9f42-7186c7fc87f6":{"title":"Demos - Year Of 2024","description":""},"f2649a30-2fcd-11f1-8574-5fc6e30d66e8":{"title":"#H:","description":""},"f264d870-2fcd-11f1-8539-81b4c6fd1657":{"title":"Hertz-HZT Demo Collection","description":""},"f2651e40-2fcd-11f1-9493-058b4d3180dd":{"title":"Demos - Year Of 2023","description":""},"f2655dd0-2fcd-11f1-8967-3d561ee0dac7":{"title":"Demos - Year Of 2022","description":""},"f2659e90-2fcd-11f1-aa21-5b204031d462":{"title":"Demos","description":""},"f265e3d0-2fcd-11f1-a726-9198d201cf7f":{"image":"\/uploads\/b\/e5761de0-8027-11ee-875d-d98ab2565f71\/logo_v2_banner.png","title":"Henry L","description":"an extraordinarily typical virgo & istp."}},"story":{},"template":{"storiesOverview":{"title":"Stories & Updates","description":""}}},"blocksMeta":{"001d0c40-c167-11ee-987d-c7408e5ed85b":"RYIzFf","016fcf00-763e-11f0-8119-4531dadaff11":"NoKqPM","0176faf0-763e-11f0-8119-4531dadaff11":"fZoTcP","017d6390-763e-11f0-8119-4531dadaff11":"fsVmRH","0186d970-763e-11f0-8119-4531dadaff11":"MdTzgG","054d37a0-763b-11f0-8119-4531dadaff11":"DegjOq","088fd420-c167-11ee-987d-c7408e5ed85b":"jXoMxU","0955b450-ad08-11ef-bfd6-07c089f6e872":"FJmDXY","0d6ddc80-c167-11ee-987d-c7408e5ed85b":"NmYflc","0ef46eb0-803b-11ee-bae2-89a5a702232a":"rTOuFR","0f4688a0-e0c3-11ef-b3b9-254e0ba00eea":"ElXKzg","10c459c0-709b-11ef-ad53-39a075591a8c":"WRNgrf","15800520-ca2b-11ee-871f-cd805f48a187":"EcmBfb","15873110-ca2b-11ee-871f-cd805f48a187":"EeLGsk","17532541-802e-11ee-8e64-65436636e78c":"imKzJu","178d4cc0-709c-11ef-ad53-39a075591a8c":"jgqkHm","179b0860-709c-11ef-ad53-39a075591a8c":"eVydQg","184dcad0-bf59-11ee-a3c3-d76b6a861138":"LkcxhQ","1df21291-c18c-11ee-86bd-d7747d05cbad":"aCJAyB","2289b260-95b6-11ee-9033-ad6b59b27ed1":"UrjPIb","23587770-fcc2-11ef-bd9b-cbc8a48662a8":"YUpzwq","27e8b980-f77d-11ee-bf30-118e0cd29162":"hqDaTp","3808f570-8034-11ee-ad2a-0b5ac8827016":"yAqcNz","390e5510-ad0f-11ef-bfd6-07c089f6e872":"HKfeZs","3991e840-05e1-11f1-a61b-c9c701b13aca":"MZHWID","3c944600-c187-11ee-86bd-d7747d05cbad":"qFDube","3d6c4240-8117-11ee-bf04-557c1ee21876":"fxuMQR","3e96c5f0-23a1-11ef-bfaa-5f840232600c":"gGjdBs","3ed73b01-af19-11ee-b080-09728cd1f01e":"pLMUNi","4198bea0-b1cf-11ee-83c1-179e5c487a4c":"sUeLAW","43360390-3dab-11ef-b0d6-171c7640c90d":"wgvLPk","46224ac0-ad0c-11ef-bfd6-07c089f6e872":"torVbJ","48869940-bdbb-11f0-8286-3bbab50ab740":"BebJUF","4a4b5fe1-c18c-11ee-86bd-d7747d05cbad":"TguZwe","4a510d60-31a7-11ef-ae76-6d79130e0369":"tfxTrp","4a836970-05e2-11f1-a61b-c9c701b13aca":"NHZRTw","4c868370-2fc6-11f1-a3ad-3fa030400001":"JxbZdh","4f7f7c90-8117-11ee-bf04-557c1ee21876":"kXLitQ","559800c0-8117-11ee-bf04-557c1ee21876":"KXywLv","5969c150-e735-11ee-8b55-69f6c4812d25":"FpzLBh","5a6a81b1-d6dd-11ee-8d40-17ef1380ca16":"OEyqth","5bcfccc0-8117-11ee-bf04-557c1ee21876":"OWqxGv","61c76911-8033-11ee-ad2a-0b5ac8827016":"EkOCaj","6706b430-e2a1-11f0-9771-e7e72478cf7b":"HjdZfC","670af9f0-e2a1-11f0-9771-e7e72478cf7b":"MCuqKQ","6712e930-e2a1-11f0-9771-e7e72478cf7b":"ZXvSqs","6a1bd0f1-bce3-11ee-9109-179b0b50d12d":"urdlVE","6b97de90-8117-11ee-bf04-557c1ee21876":"AJpifk","6c7ac190-ce94-11ee-af64-d7880b8feeb3":"cLlFGa","755bfc40-6225-11f0-b78b-075c250a8c31":"DrTwpb","75b91ad0-e2a2-11f0-9771-e7e72478cf7b":"mMEGHg","765b53b1-c182-11ee-86bd-d7747d05cbad":"RlbDey","7667a940-8117-11ee-bf04-557c1ee21876":"QsBhEK","81939ce1-8147-11ee-b100-1d8cd97635e7":"DVrwBR","81e53f51-8147-11ee-b100-1d8cd97635e7":"SJLheK","8247bc21-763c-11f0-8119-4531dadaff11":"ZgvCWH","8abe7b40-d477-11ee-832d-35a41e1687ce":"VzGjId","8ad1bb20-e0c3-11ef-b3b9-254e0ba00eea":"TCqSat","8c45cae1-ca2c-11ee-871f-cd805f48a187":"OVyYXH","91b82680-c185-11ee-86bd-d7747d05cbad":"EAYFMS","a323e4b0-8033-11ee-ad2a-0b5ac8827016":"CZQXHO","a3f44160-c18c-11ee-86bd-d7747d05cbad":"qApEMf","a50a92b0-ad05-11ef-bfd6-07c089f6e872":"FIzYLh","a7117290-8033-11ee-ad2a-0b5ac8827016":"evqbiZ","a8a83f30-8033-11ee-ad2a-0b5ac8827016":"DWbIzk","aad2e5b0-05df-11f1-a61b-c9c701b13aca":"JCTYzf","abe3c020-bdb7-11f0-8286-3bbab50ab740":"DBmTWM","abf21401-8028-11ee-82af-176cc0d237a8":"ahJfev","aca66350-74ba-11f0-8119-4531dadaff11":"aDFJyP","b2d0d070-2fc8-11f1-a3ad-3fa030400001":"ewIuzY","b2e060d0-2fc8-11f1-a3ad-3fa030400001":"KQZpSF","b795d081-8028-11ee-82af-176cc0d237a8":"KpXQkD","c7a48841-8028-11ee-82af-176cc0d237a8":"byzPkh","c7da3a11-802f-11ee-8e64-65436636e78c":"eHKVZv","c8da0f61-c181-11ee-86bd-d7747d05cbad":"OrpRwf","cc6a3ea1-f98b-11ef-9a42-236b99c53463":"tgWaiX","d71adac0-fcbb-11ef-bd9b-cbc8a48662a8":"DjIJzt","d768ec61-802f-11ee-8e64-65436636e78c":"McuSwN","d8c381b0-fcbb-11ef-bd9b-cbc8a48662a8":"XuQMhJ","ddcd2df0-fcbb-11ef-bd9b-cbc8a48662a8":"rVWgzM","de948df0-f98c-11ef-9a42-236b99c53463":"iLumsF","de9a5a50-f98c-11ef-9a42-236b99c53463":"nYMZEy","e197f830-2fc2-11f1-a3ad-3fa030400001":"EasJTK","e5beca30-8027-11ee-b19f-b197afad518c":"ZjBGym","e5beca31-8027-11ee-b19f-b197afad518c":"eqgWvn","e5beca32-8027-11ee-b19f-b197afad518c":"cSlPMh","e5beca33-8027-11ee-b19f-b197afad518c":"ItuTow","e5beca34-8027-11ee-b19f-b197afad518c":"FRnCbp","e5cd84f0-fcbb-11ef-bd9b-cbc8a48662a8":"AMLrEv","e61b90f0-ad06-11ef-bfd6-07c089f6e872":"mznthi","e62220a0-ad06-11ef-bfd6-07c089f6e872":"gMFhWL","e650d101-8027-11ee-b19f-b197afad518c":"CWQKPp","e7d71090-fcbb-11ef-bd9b-cbc8a48662a8":"EpvjDN","e9357e30-bcdf-11ee-a93f-e73b4dae71bb":"GUnRzj","e99fb1a0-52e9-11f0-89c6-374eeb5838aa":"uFsrTC","e9a86430-52e9-11f0-89c6-374eeb5838aa":"KMCfPa","e9b0a190-52e9-11f0-89c6-374eeb5838aa":"KRqNYj","eb1ec3f0-2fc9-11f1-a3ad-3fa030400001":"wWtLTU","ec2272e0-bdbb-11f0-8286-3bbab50ab740":"CRVrvg","ecdbff90-05e0-11f1-a61b-c9c701b13aca":"JEwyqM","ee2ab351-31a7-11ef-ae76-6d79130e0369":"SLZeJv","ef65df81-c166-11ee-987d-c7408e5ed85b":"hoUbNV","f3c1cf41-802e-11ee-8e64-65436636e78c":"AlYeph","f3f2edd0-fcbc-11ef-bd9b-cbc8a48662a8":"FvuEpB","f7db6ee1-31a6-11ef-ae76-6d79130e0369":"PRymiD","f9b2da50-05df-11f1-a61b-c9c701b13aca":"OhMyTX","f9ba7b70-05df-11f1-a61b-c9c701b13aca":"qMRoKk","fb1d9ed0-05e8-11f1-a61b-c9c701b13aca":"FocUfn","ff313620-bdb9-11f0-8286-3bbab50ab740":"gGIdcJ"},"footerLogo":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/logo_v2-coloured_1x1_transparent_1712512192.png","headerLogo":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/logo_v2-coloured_1x1_transparent_1712512192.png","navigation":[{"link":{"page":{"pageID":"f262a350-2fcd-11f1-aa30-0fd5c324c1fa"}},"type":"page","children":[{"link":{"page":{"pageID":"f2659e90-2fcd-11f1-aa21-5b204031d462"}},"type":"page","title":"Demos","children":[],"expanded":true},{"link":{"page":{"pageID":"f263d580-2fcd-11f1-9693-fbb180518960"}},"type":"page","children":[],"expanded":true},{"link":{"page":{"pageID":"f2621c00-2fcd-11f1-bc42-f5efa44db6c1"}},"type":"page","title":"Covers","children":[],"expanded":false},{"link":{"page":{"pageID":"f25f94c0-2fcd-11f1-a644-3bb0bb8a8023"}},"type":"page"}],"expanded":true},{"link":{"page":{"pageID":"f261edf0-2fcd-11f1-a760-3d4c5aaa5e3f"}},"type":"page","title":"Engineering","children":[{"link":{"page":{"pageID":"f25f5100-2fcd-11f1-914d-9d990abd3573"}},"type":"page"},{"link":{"page":{"pageID":"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9"}},"type":"page","title":"Academic Projects","children":[]}],"expanded":true},{"link":{"page":{"pageID":"f2640ee0-2fcd-11f1-b6cf-b334c4c84077"}},"type":"page","children":[],"expanded":true},{"link":{"page":{"pageID":"f2631760-2fcd-11f1-a2fc-5945d6283144"}},"type":"page","children":[]}],"textStyles":{"body":{"url":null,"fontId":"larsseit","weight":"400","fontName":"Larsseit","provider":"custom","fontFormat":null,"lineHeight":1.3,"letterSpacing":0},"label":{"url":null,"fontId":"larsseit","weight":"400","fontName":"Larsseit","provider":"custom","fontFormat":null,"lineHeight":1.1,"letterSpacing":0.01},"title":{"url":null,"fontId":"comfortaa","weight":"700","fontName":"Comfortaa","provider":"google","fontFormat":null,"lineHeight":1.1,"letterSpacing":-0.01},"headline":{"url":null,"fontId":"comfortaa","weight":"700","fontName":"Comfortaa","provider":"google","fontFormat":null,"lineHeight":1.1,"letterSpacing":-0.02}},"buttonstyle":"squared","customFonts":[],"featuresets":["blogOverview"],"contentAreas":{"cart":{"id":"e5d6e612-8027-11ee-b19f-b197afad518c","hidden":false,"content":{"id":"e5beca33-8027-11ee-b19f-b197afad518c","type":"block","layout":"cart-1","purpose":"cart@^1.3.6","elements":[{"id":"e5d6bf08-8027-11ee-b19f-b197afad518c","purpose":"text","properties":{}}],"properties":{"shortID":"ItuTow"}}},"footer":{"id":"e6263e94-8027-11ee-b19f-b197afad518c","hidden":false,"content":{"id":"e5beca30-8027-11ee-b19f-b197afad518c","type":"block","hidden":false,"layout":"footer-7","purpose":"footer","elements":[{"id":"e6263e90-8027-11ee-b19f-b197afad518c","purpose":"logo","properties":{"name":"logo_v2-coloured_1x1_t...ent.png","type":"logo-image-override","scale":11,"original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/logo_v2-coloured_1x1_transparent_1712512192.png","cropOptions":null,"logoDimensions":{"width":2953,"height":2953}}},{"id":"e6263e91-8027-11ee-b19f-b197afad518c","purpose":"text","properties":{"hidden":true,"allCaps":false,"content":{"quill":{"ops":[{"insert":"\u00a9 2024, 404 Studio Limited. \nAll Rights Reserved.\n"}]}}}},{"id":"e6263e92-8027-11ee-b19f-b197afad518c","purpose":"social","properties":{"presetColor":"brand"}},{"id":"e6261783-8027-11ee-b19f-b197afad518c","purpose":"cookie-management-settings","properties":{}},{"id":"e6263e93-8027-11ee-b19f-b197afad518c","purpose":"newsletter","properties":{"name":"Footer Box","type":"subscription","button":{"label":"","presetStyle":"secondary"},"fields":[{"id":"30063360-ad01-11ef-a12d-919f7ef26049","type":"action-input","label":"","required":true,"properties":{},"placeholder":"","instructions":""}],"hidden":true,"schema":{"id":"3fb7bdb0-ad06-11ef-a12d-919f7ef26049","hash":"07fb0997777c4c054063de392f499d6f"},"confirmation":"Thanks for being in contact!"}}],"properties":{"shortID":"ZjBGym","textAlign":"","background":{"type":"color","color":{"value":"--color-white","isDark":false}},"navigation":{"hidden":true,"SITE_NAV":[{"tab":true,"link":{"external":"https:\/\/audio.com\/404stud1o"},"type":"external","title":"\u00a9 2024, 404 Studio Limited. All Rights Reserved.","children":[],"expanded":false}],"shouldCopyHeader":false},"colorProfile":"primary-bold","paymentMethods":{"hidden":true},"newsletterTitle":{"hidden":false,"content":{"quill":{"ops":[{"insert":"\u00a9 2026, 404 Studio.  All Rights Reserved.\n"}]}},"fontSize":"step-0","textStyle":"body"}}}},"header":{"id":"e5d6e610-8027-11ee-b19f-b197afad518c","hidden":false,"content":{"id":"e5beca31-8027-11ee-b19f-b197afad518c","type":"block","hidden":false,"layout":"header-3","purpose":"header","elements":[{"id":"e5d6bf00-8027-11ee-b19f-b197afad518c","purpose":"logo","properties":{"name":"logo_v2-coloured_1x1_t...ent.png","type":"logo-image-override","scale":13,"original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/logo_v2-coloured_1x1_transparent_1712512192.png","cropOptions":null,"logoDimensions":{"width":2953,"height":2953}}},{"id":"e5d6bf01-8027-11ee-b19f-b197afad518c","purpose":"social","properties":{}},{"id":"e5d6bf02-8027-11ee-b19f-b197afad518c","purpose":"navigation","properties":{"hidden":false,"uppercase":false}},{"id":"e5d6bf03-8027-11ee-b19f-b197afad518c","purpose":"hamburger","properties":{}},{"id":"e5d6bf04-8027-11ee-b19f-b197afad518c","purpose":"cart","properties":{"hidden":true}}],"properties":{"shortID":"eqgWvn","iconColor":"--color-black","textAlign":"","background":{"type":"color","color":{"value":"--gray-light-one","isDark":false},"image":{},"gradient":{"type":"linear","angle":180,"colors":[{"color":"--color-white","position":0},{"color":"--primary-color","position":100}]},"transparentOverBanner":false},"actionButton":{"link":{"tab":false,"link":{"shopAll":true}},"hidden":true,"presetStyle":"secondary"},"headerScroll":"sticky","disableSearch":true}}},"navMobile":{"id":"e5d6e611-8027-11ee-b19f-b197afad518c","hidden":false,"content":{"id":"e5beca32-8027-11ee-b19f-b197afad518c","type":"block","layout":"navigation-mobile","purpose":"nav-mobile@^1.2.1","elements":[{"id":"e5d6bf05-8027-11ee-b19f-b197afad518c","purpose":"navigation","properties":{}},{"id":"e5d6bf06-8027-11ee-b19f-b197afad518c","purpose":"close","properties":{}},{"id":"e5d6bf07-8027-11ee-b19f-b197afad518c","purpose":"social","properties":{}}],"properties":{"shortID":"cSlPMh"}}},"freeFooter":{"id":"e5d6e613-8027-11ee-b19f-b197afad518c","hidden":false,"content":{"id":"e5beca34-8027-11ee-b19f-b197afad518c","type":"block","layout":"free-footer-1","purpose":"free-footer@^1.0.0","elements":[],"properties":{"bgColor":"light","shortID":"FRnCbp"}}}},"pageOverrides":{},"pageTemplates":{"story":"f2669e50-2fcd-11f1-9b23-43d2bac9d760","product":"f2670220-2fcd-11f1-93c5-4fc4e7c0de78","shopAll":"f2674e70-2fcd-11f1-a4ff-5556b44a52a7","category":"f2674e70-2fcd-11f1-a4ff-5556b44a52a7","leaveReview":"f2672b90-2fcd-11f1-8979-d1c60bcc6260","orderOnline":"f266e120-2fcd-11f1-9625-bb735d5c5554","instagramFeed":"f266bf50-2fcd-11f1-9e74-c13349ff7ba8","searchResults":"f2674e70-2fcd-11f1-a4ff-5556b44a52a7","storiesOverview":"f26679f0-2fcd-11f1-bc25-956a39d8b0a4"},"protectedPages":{"page":{"f25f5100-2fcd-11f1-914d-9d990abd3573":"public","f25f94c0-2fcd-11f1-a644-3bb0bb8a8023":"public","f25fda00-2fcd-11f1-a7f1-f52cda07fc70":"public","f2600560-2fcd-11f1-8f28-ddc26ba30a68":"public","f2604a40-2fcd-11f1-8432-09dec9bdc6e1":"public","f2608970-2fcd-11f1-bf75-8d9774c5e974":"public","f260cc40-2fcd-11f1-8e9f-63b942b5efb6":"public","f26137a0-2fcd-11f1-aa1a-0bbf76b009c9":"public","f261b180-2fcd-11f1-a42a-7f6be0eb12db":"public","f2621c00-2fcd-11f1-bc42-f5efa44db6c1":"public","f2624da0-2fcd-11f1-8057-a18ed2a3de52":"public","f2644f10-2fcd-11f1-9f42-7186c7fc87f6":"public"}},"fontFamilyHistory":{"body":["larsseit","inter","ibm-plex-serif"],"label":["larsseit","inter","ibm-plex-serif"],"title":["quicksand","pacifico","abril-fatface"],"headline":["quicksand","pacifico","abril-fatface"]}},"version":8},"user":{"id":147668699,"properties":{"isSquareSyncUser":true,"country":"GB"}},"billingFeatures":{"billingFeatures":{"embed_restricted_widgets":false,"com_gifting":false,"com_authorizenet_payment":false,"com_digital_products":true,"com_coupons":true,"com_product_reviews":false,"com_product_limit":-1,"popup_announcement":true,"popup_coupons":false,"popup_lead_capture":true,"community_support":true,"free_ssl_security":true,"custom_domain_connection":false,"advanced_site_stats":false,"password_protection":false,"video_backgrounds":false,"hd_video_and_audio":false,"membership_registration":false,"membership_settings":false,"online_store":true,"accept_paypal_payments":false,"product_badges":true,"product_modifiers":true,"in_store_pickup":true,"shipping_calculator":true,"chat_and_email_support":true,"phone_support":true,"priority_support":false,"advanced_ecommerce_stats":false,"seo":true,"unlimited_storage":false,"members":0,"abandoned_cart_emails":false,"integrated_shipping_labels":true,"tax_calculator":true,"no_weebly_ads":false,"site_search":false,"product_search":true,"square_gift_cards":true,"inventory_management":true,"integrated_facebook_ads":false,"real_time_shipping_calculator":false,"age_confirmation":true,"square_processing_rate_id":"ECOM_SOS_FREE","square_processing_rate_display":{"USD":[{"percent":"3.3","flat":30,"type":"all"}],"AUD":[{"percent":"2.2","flat":0,"type":"all"}],"CAD":[{"percent":"2.8","flat":30,"type":"all"}],"EUR":[{"percent":"1.4","flat":25,"type":"intra-eu"},{"percent":"2.9","flat":25,"type":"non-eu"}],"GBP":[{"percent":"1.4","flat":25,"type":"intra-eu"},{"percent":"2.5","flat":25,"type":"non-eu"}],"JPY":[{"percent":"3.6","flat":0,"type":"non-jcb"},{"percent":"3.6","flat":0,"type":"jcb"}]},"favicon_customization":true,"site_code_customization":false,"instagram_feed_tagging":true,"quick_shop":true,"scheduleEnabled":false,"smartGroupsEnabled":false,"socialAdsEnabled":true,"lifetimeEmails":2,"emailsPerMonth":2,"recipientsPerEmail":500,"recipientsPerMonth":1000,"automations":0,"automatedRecipientsPerMonth":0,"enabledLeadFormTypes":["popup"],"allowsPurchasingCredits":false,"insights_overview":false,"insights_sales":false,"insights_products":false,"custom_fonts":false,"com_shipping_settings":true,"com_manage_gift_cards":true,"com_create_shipping_label_discount":true,"customer_accounts":true,"com_stripe_payment":false,"com_product_sync":true,"com_product_variant_limit":-1,"com_shipping_labels_tier":"weebly_cpp_tier","com_transaction_fee":"0.00","form_file_upload":false,"product_scheduled_actions":false,"custom_site_icon":true,"video_uploading":0,"buyer_customer_accounts":false,"personalized_order_screen":false,"personalized_recommendations":false,"easy_reordering":false,"self_serve_ordering":false,"ecom_preorders":false,"order_text_alerts":false,"time_based_categories":true,"advanced_order_limits":false,"modifier_images":false,"free_fulfillment_meter":false,"spd_fees_amount":0,"twenty_four_seven_support":false,"advanced_design_controls":false,"order_item_quantity_limit":false,"stock_media":false,"so_buyer_subscriptions":false,"item_badge_customization":false,"shop_all_item_layouts":false,"icon_sets":false,"banner_slides":false,"priority_phone_support":false,"pdp_layouts":false,"full_height_banners":false,"scrolling_text":false,"featured_item_layouts":false,"mega_menu":false,"appts_customization":false,"premium_text_image_layout":false,"featured_category_layouts":false,"ai_generated_content":false,"image_shapes":false,"group_ordering":false,"inventory_bundles":false,"com_square_transaction_best_discount":false},"isTrial":false},"siteFeatures":{"embed_restricted_widgets":false,"com_gifting":false,"com_authorizenet_payment":false,"com_digital_products":true,"com_coupons":true,"com_product_reviews":false,"com_product_limit":-1,"popup_announcement":true,"popup_coupons":false,"popup_lead_capture":true,"community_support":true,"free_ssl_security":true,"custom_domain_connection":false,"advanced_site_stats":false,"password_protection":false,"video_backgrounds":false,"hd_video_and_audio":false,"membership_registration":false,"membership_settings":false,"online_store":true,"accept_paypal_payments":false,"product_badges":true,"product_modifiers":true,"in_store_pickup":true,"shipping_calculator":true,"chat_and_email_support":true,"phone_support":true,"priority_support":false,"advanced_ecommerce_stats":false,"seo":true,"unlimited_storage":false,"members":0,"abandoned_cart_emails":false,"integrated_shipping_labels":true,"tax_calculator":true,"no_weebly_ads":false,"site_search":false,"product_search":true,"square_gift_cards":true,"inventory_management":true,"integrated_facebook_ads":false,"real_time_shipping_calculator":false,"age_confirmation":true,"square_processing_rate_id":"ECOM_SOS_FREE","square_processing_rate_display":{"USD":[{"percent":"3.3","flat":30,"type":"all"}],"AUD":[{"percent":"2.2","flat":0,"type":"all"}],"CAD":[{"percent":"2.8","flat":30,"type":"all"}],"EUR":[{"percent":"1.4","flat":25,"type":"intra-eu"},{"percent":"2.9","flat":25,"type":"non-eu"}],"GBP":[{"percent":"1.4","flat":25,"type":"intra-eu"},{"percent":"2.5","flat":25,"type":"non-eu"}],"JPY":[{"percent":"3.6","flat":0,"type":"non-jcb"},{"percent":"3.6","flat":0,"type":"jcb"}]},"favicon_customization":true,"site_code_customization":false,"instagram_feed_tagging":true,"quick_shop":true,"scheduleEnabled":false,"smartGroupsEnabled":false,"socialAdsEnabled":true,"lifetimeEmails":2,"emailsPerMonth":2,"recipientsPerEmail":500,"recipientsPerMonth":1000,"automations":0,"automatedRecipientsPerMonth":0,"enabledLeadFormTypes":["popup"],"allowsPurchasingCredits":false,"insights_overview":false,"insights_sales":false,"insights_products":false,"custom_fonts":false,"com_shipping_settings":true,"com_manage_gift_cards":true,"com_create_shipping_label_discount":true,"customer_accounts":true,"com_stripe_payment":false,"com_product_sync":true,"com_product_variant_limit":-1,"com_shipping_labels_tier":"weebly_cpp_tier","com_transaction_fee":"0.00","form_file_upload":false,"product_scheduled_actions":false,"custom_site_icon":true,"video_uploading":0,"buyer_customer_accounts":false,"personalized_order_screen":false,"personalized_recommendations":false,"easy_reordering":false,"self_serve_ordering":false,"ecom_preorders":false,"order_text_alerts":false,"time_based_categories":true,"advanced_order_limits":false,"modifier_images":false,"free_fulfillment_meter":false,"spd_fees_amount":0,"twenty_four_seven_support":false,"advanced_design_controls":false,"order_item_quantity_limit":false,"stock_media":false,"so_buyer_subscriptions":false,"item_badge_customization":false,"shop_all_item_layouts":false,"icon_sets":false,"banner_slides":false,"priority_phone_support":false,"pdp_layouts":false,"full_height_banners":false,"scrolling_text":false,"featured_item_layouts":false,"mega_menu":false,"appts_customization":false,"premium_text_image_layout":false,"featured_category_layouts":false,"ai_generated_content":false,"image_shapes":false,"group_ordering":false,"inventory_bundles":false,"com_square_transaction_best_discount":false},"featureset":{"pages":["storiesOverview"]},"page":{"id":"f265e3d0-2fcd-11f1-a726-9198d201cf7f","site_snapshot_id":"f25e61b0-2fcd-11f1-b46e-299b98e959e5","properties":{"name":"Home","route":"home","title":"Home","hidden":false,"description":"","contentAreas":{"banner":{"id":"e650d100-8027-11ee-b19f-b197afad518c","hidden":true,"content":{"id":"e650d101-8027-11ee-b19f-b197afad518c","type":"block","hidden":false,"layout":"banner-15","purpose":"banner","elements":[{"id":"e6567650-8027-11ee-b19f-b197afad518c","purpose":"title-1","properties":{"title":{"quill":{"ops":[{"insert":"Henry L\u2122"},{"insert":"\n","attributes":{"block":true}}]}},"hidden":false,"fontSize":"step-2","textStyle":"title"}},{"id":"e6567651-8027-11ee-b19f-b197afad518c","purpose":"image-1","properties":{}},{"id":"e6567652-8027-11ee-b19f-b197afad518c","purpose":"button-1","properties":{"link":{"link":{"page":{"pageID":"f265e3d0-2fcd-11f1-a726-9198d201cf7f","sectionID":"e6567653-8027-11ee-b19f-b197afad518c"}},"type":"page"},"label":"Donate now","hidden":true}}],"properties":{"text":{"hidden":false,"content":{"quill":{"ops":[{"insert":"an extraordinarily typical virgo.\nonly interested in music and engineering.\n"}]}},"fontSize":"step-0","textStyle":"body"},"label":{"hidden":true},"height":"extra-small","shortID":"CWQKPp","textAlign":"","background":{"type":"default"},"bannerImage":{"type":"inline","image":{},"hidden":true,"imageMobile":{}}}}},"userContent":{"id":"e69490c1-8027-11ee-b19f-b197afad518c","hidden":false,"content":{"id":"e69490c2-8027-11ee-b19f-b197afad518c","type":"container","cells":[{"id":"17532540-802e-11ee-8e64-65436636e78c","type":"cell","content":{"id":"17532541-802e-11ee-8e64-65436636e78c","type":"block","layout":"text-4","purpose":"text@^1.0.0","properties":{"shortID":"imKzJu","settings":{"links":{"hidden":true,"presetSize":"small"},"texts":{},"titles":{"tag":"h4","bold":false,"title":{"quill":{"ops":[{"insert":"\n"}]}},"hidden":true,"italic":false,"fontSize":"step-minus-1","textStyle":"body"}},"repeatables":[{"id":1,"link":{"label":"Learn more"},"text":{"content":{"quill":{"ops":[{"insert":"an extraordinarily typical virgo & istp."},{"insert":"\n","attributes":{"block":true}}]}}},"title":{"title":{"quill":{"ops":[{"insert":"\n"}]}}}}],"sectionTitle":{"title":{"quill":{"ops":[{"insert":"Henry L\u2122"},{"insert":"\n","attributes":{"block":true}}]}}}}}},{"id":"3ed73b00-af19-11ee-b080-09728cd1f01e","type":"cell","content":{"id":"3ed73b01-af19-11ee-b080-09728cd1f01e","type":"block","layout":"text-and-image-2-column","purpose":"text-and-image@^1.0.0","properties":{"shortID":"pLMUNi","settings":{"texts":{"fontSize":"step-0","textStyle":"body"},"images":{"size":"medium","shape":null,"aspectRatio":"1_1"},"titles":{"tag":"h3","bold":true,"hidden":false,"italic":false,"fontSize":"step-1","textStyle":"title"},"buttons":{"hidden":false,"presetSize":"small","presetColor":"--gray-light-two"}},"textAlign":"","columnCount":3,"repeatables":[{"id":3,"text":{"content":{"quill":{"ops":[{"insert":"#2026-2000T203","attributes":{"color":"var(--color-black)"}},{"insert":"\n"}]}}},"image":{"link":{"tab":false,"link":{"page":{"pageID":"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9","sectionID":"0f4688a0-e0c3-11ef-b3b9-254e0ba00eea"}},"type":"page"},"figure":{"name":"IMG_20260404_024526.jpg","width":1740,"height":1740,"source":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/IMG_20260404_024526_1775267204.jpg","altText":"","original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/IMG_20260404_024526_1775267204.jpg","sourceSet":{},"attribution":{},"cropOptions":null},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"MechaRotom - ","attributes":{"bold":true,"color":"rgba(0, 0, 0, 0.9)"}},{"insert":"\n","attributes":{"block":true}},{"insert":"Wireless Controlled Robotics Arm","attributes":{"color":"rgba(0, 0, 0, 0.9)"}},{"insert":"\n","attributes":{"block":true}}]}},"fontSize":"medium","textStyle":"title"},"button":{"link":{"tab":false,"link":{"page":{"pageID":"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9","sectionID":"0f4688a0-e0c3-11ef-b3b9-254e0ba00eea"},"external":"https:\/\/audio.com\/404stud1o\/audio\/hl008"},"type":"page"},"label":"view details\n","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}},{"id":1,"text":{"content":{"quill":{"ops":[{"insert":"#2025-2000T106\n"}]}}},"image":{"link":{"tab":false,"link":{"page":{"pageID":"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9","sectionID":"e197f830-2fc2-11f1-a3ad-3fa030400001"}},"type":"page"},"figure":{"name":"Full Assembly v18.png","width":1920,"height":1080,"source":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/Full%20Assembly%20v18_1775266924.png","altText":"","original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/Full%20Assembly%20v18_1775266924.png","sourceSet":{},"attribution":{},"cropOptions":null},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"SLE\u00b7168 - Line-Following Christmas Sleigh Buggy"},{"insert":"\n","attributes":{"block":true}}]}},"fontSize":"medium","textStyle":"title"},"button":{"link":{"tab":false,"link":{"page":{"pageID":"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9","sectionID":"e197f830-2fc2-11f1-a3ad-3fa030400001"},"external":"https:\/\/audio.com\/404stud1o\/audio\/hl008"},"type":"page"},"label":"view details\n","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}},{"id":2,"text":{"content":{"quill":{"ops":[{"insert":"#2024-1000T107\n"}]}}},"image":{"link":{"tab":false,"link":{"page":{"pageID":"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9","sectionID":"ff313620-bdb9-11f0-8286-3bbab50ab740"}},"type":"page"},"figure":{"name":"image.png","width":494,"height":529,"source":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/image_1732745324.png","altText":"","original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/image_1732745324.png","sourceSet":{},"attribution":{},"cropOptions":null},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"Celebration Centrepiece for Royal Holloway Makers' Society"},{"insert":"\n","attributes":{"block":true}}]}},"fontSize":"medium","textStyle":"title"},"button":{"link":{"tab":false,"link":{"page":{"pageID":"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9","sectionID":"ff313620-bdb9-11f0-8286-3bbab50ab740"},"external":"https:\/\/audio.com\/404stud1o\/audio\/hl011"},"type":"page"},"label":"view details\n","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}}],"sectionText":{"hidden":false,"content":{"quill":{"ops":[{"insert":"\n"}]}}},"sectionTitle":{"title":{"quill":{"ops":[{"insert":"project highlights"},{"insert":"\n","attributes":{"block":true}}]}},"hidden":false}}}},{"id":"4c8bb390-2fc6-11f1-a3ad-3fa030400001","type":"cell","content":{"id":"4c868370-2fc6-11f1-a3ad-3fa030400001","type":"block","layout":"text-and-image-2-column","purpose":"text-and-image@^1.0.0","properties":{"shortID":"JxbZdh","settings":{"texts":{"fontSize":"step-0","textStyle":"body"},"images":{"size":"medium","shape":null,"aspectRatio":"1_1"},"titles":{"tag":"h3","bold":true,"hidden":false,"italic":false,"fontSize":"step-1","textStyle":"title"},"buttons":{"hidden":false,"presetSize":"small","presetColor":"--gray-light-two"}},"columnCount":3,"repeatables":[{"id":3,"text":{"content":{"quill":{"ops":[{"insert":"completion: 2026-02-06","attributes":{"color":"var(--color-black)"}},{"insert":"\n"}]}}},"image":{"link":{"tab":false,"link":{"page":{"pageID":"f25fda00-2fcd-11f1-a7f1-f52cda07fc70","sectionID":"f9ba7b70-05df-11f1-a61b-c9c701b13aca"}},"type":"page"},"figure":{"name":"Scarlet in E.png","width":1890,"height":1890,"source":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/Scarlet%20in%20E_1770659329.png","altText":"","original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/Scarlet%20in%20E_1770659329.png","sourceSet":{},"attribution":{},"cropOptions":null},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"#HL014"},{"insert":"\n","attributes":{"block":true}},{"insert":"Scarlet in E"},{"insert":"\n","attributes":{"block":true}}]}},"fontSize":"medium","textStyle":"title"},"button":{"link":{"tab":false,"link":{"page":{"pageID":"f25fda00-2fcd-11f1-a7f1-f52cda07fc70","sectionID":"f9ba7b70-05df-11f1-a61b-c9c701b13aca"},"external":"https:\/\/audio.com\/404stud1o\/audio\/hl008"},"type":"page"},"label":"view details\n","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}},{"id":1,"text":{"content":{"quill":{"ops":[{"insert":"completion: 2025-12-25","attributes":{"color":"var(--color-black)"}},{"insert":"\n"}]}}},"image":{"link":{"tab":false,"link":{"page":{"pageID":"f2600560-2fcd-11f1-8f28-ddc26ba30a68"}},"type":"page"},"figure":{"name":"cover_art_winter0k.png","width":1890,"height":1890,"source":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/cover_art_winter0k_1766784177.png","altText":"","original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/cover_art_winter0k_1766784177.png","sourceSet":{},"attribution":{},"cropOptions":null},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"\u51ac\u5b63\u9650\u5b9a Hush","attributes":{"bold":true}},{"insert":"\n","attributes":{"block":true}},{"insert":"(\u7d55\u5c0d\u96f6\u5ea6\u7248 0K Version)"},{"insert":"\n","attributes":{"block":true}}]}},"fontSize":"medium","textStyle":"title"},"button":{"link":{"tab":false,"link":{"page":{"pageID":"f2600560-2fcd-11f1-8f28-ddc26ba30a68"},"external":"https:\/\/audio.com\/404stud1o\/audio\/hl008"},"type":"page"},"label":"view details\n","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}},{"id":2,"text":{"content":{"quill":{"ops":[{"insert":"completion: 2025-10-25\n"}]}}},"image":{"link":{"tab":false,"link":{"page":{"pageID":"f261b180-2fcd-11f1-a42a-7f6be0eb12db","sectionID":"179b0860-709c-11ef-ad53-39a075591a8c"}},"type":"page"},"figure":{"name":"Resonance in A.png","width":1890,"height":1890,"source":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/Resonance%20in%20A_1762725456.png","altText":"","original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/Resonance%20in%20A_1762725456.png","sourceSet":{},"attribution":{},"cropOptions":null},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"#HL011"},{"insert":"\n","attributes":{"block":true}},{"insert":"Resonance in A\n"}]}},"fontSize":"medium","textStyle":"title"},"button":{"link":{"tab":true,"link":{"external":"https:\/\/audio.com\/404stud1o\/audio\/hl011"},"type":"external"},"label":"view details\n","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}}],"sectionText":{"hidden":false,"content":{"quill":{"ops":[{"insert":"\n"}]}}},"sectionTitle":{"title":{"quill":{"ops":[{"insert":"latest music compositions & arrangements\n"}]}},"hidden":false}}}},{"id":"27f94fc0-fcc2-11ef-bd9b-cbc8a48662a8","type":"cell","content":{"id":"23587770-fcc2-11ef-bd9b-cbc8a48662a8","type":"block","layout":"text-and-image-2-column","purpose":"text-and-image@^1.0.0","properties":{"shortID":"YUpzwq","settings":{"texts":{"fontSize":"step-minus-1","textStyle":"body"},"images":{"size":"medium","aspectRatio":"1_1"},"titles":{"tag":"h3","bold":true,"hidden":false,"italic":false,"fontSize":"step-1","textStyle":"title"},"buttons":{"hidden":false,"presetSize":"small","presetColor":"--gray-light-two"}},"textAlign":"","columnCount":3,"repeatables":[{"id":1,"text":{"content":{"quill":{"ops":[{"insert":"piano version cover series by \u8ed2\u516c\u8207\u5c0f\u6797\u97f3\u6a02\u7ad9","attributes":{"bold":true}},{"insert":"\n\n\n#HIMN-ORIG-PNO\n"}]}}},"image":{"alt":"","link":{"tab":false,"link":{"page":{"pageID":"f260cc40-2fcd-11f1-8e9f-63b942b5efb6"},"external":"https:\/\/himnmusic.weeblysite.com\/to-the-antiques"},"type":"page"},"figure":{"name":"SEA-VID.png","width":1890,"height":1890,"source":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/SEA-VID_1732742500.png","altText":"","original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/SEA-VID_1732742500.png","sourceSet":{},"focalPoint":{"x":0.5,"y":0.5},"attribution":{},"cropOptions":null,"positionPoint":{"x":0.5,"y":0.5}},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"#\u5f48\u5440\u5f48\u5587\u5582\ud83c\udfb9\nLet's Play Piano!\n"}]}},"fontSize":"medium","textStyle":"title"},"button":{"link":{"tab":false,"link":{"page":{"pageID":"f260cc40-2fcd-11f1-8e9f-63b942b5efb6"},"external":"https:\/\/himnmusic.weeblysite.com\/to-the-antiques"},"type":"page"},"label":"view details\n","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}},{"id":3,"text":{"content":{"quill":{"ops":[{"insert":"initiated by \u8ed2\u516c\u97f3\u6a02\u7ad9","attributes":{"bold":true}},{"insert":"\nrelease date: (unreleased)\n\n#HC27-BRTH-MU3\n"}]}}},"image":{"alt":"","link":{"tab":true,"link":{"page":{"pageID":"b2570460-bcdf-11ee-974e-7b0074951bdf"},"external":"https:\/\/himnmusic.weeblysite.com\/to-the-antiques"},"type":"external"},"figure":{"name":"Name-BWbackground.png","width":718,"height":718,"source":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/2024-01-27_07-13-04_1706339590.png","original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/Name-BWbackground_1706338223.png","sourceSet":{"400w":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/2024-01-27_07-13-04_1706339590.png?width=400","800w":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/2024-01-27_07-13-04_1706339590.png?width=800","1200w":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/2024-01-27_07-13-04_1706339590.png?width=1200","1600w":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/2024-01-27_07-13-04_1706339590.png?width=1600","2000w":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/2024-01-27_07-13-04_1706339590.png?width=2000","2400w":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/2024-01-27_07-13-04_1706339590.png?width=2400"},"focalPoint":{"x":0.5,"y":0.5},"attribution":{},"cropOptions":{"zoom":1,"center":{"x":0.5,"y":0.5},"realZoom":1,"rotation":0},"positionPoint":{"x":0.5,"y":0.5}},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"\u81f4\u6211\u5011\u7684\u5c0f\u53e4\u8463"},{"insert":"\n","attributes":{"block":true}},{"insert":"(To The Antiques)"},{"insert":"\n","attributes":{"block":true}}]}},"fontSize":"medium","textStyle":"title"},"button":{"link":{"tab":true,"link":{"page":{"pageID":"b2570460-bcdf-11ee-974e-7b0074951bdf"},"external":"https:\/\/himnmusic.weeblysite.com\/to-the-antiques"},"type":"external"},"label":"view details\n","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}}],"sectionText":{"hidden":false,"content":{"quill":{"ops":[{"insert":"\n"}]}}},"sectionTitle":{"title":{"quill":{"ops":[{"insert":"latest participated works"},{"insert":"\n","attributes":{"block":true}}]}},"hidden":false}}}},{"id":"a8b80a50-ad05-11ef-bfd6-07c089f6e872","type":"cell","content":{"id":"a50a92b0-ad05-11ef-bfd6-07c089f6e872","type":"block","layout":"text-and-image-2-column","purpose":"text-and-image@^1.0.0","properties":{"shortID":"FIzYLh","settings":{"texts":{"align":false,"fontSize":"step-minus-1","textStyle":"body"},"images":{"size":"medium","aspectRatio":"1_1"},"titles":{"tag":"h3","bold":true,"color":"var(--color-black)","hidden":false,"italic":false,"fontSize":"step-1","textStyle":"title"},"buttons":{"hidden":true,"presetSize":"small","presetColor":"--gray-light-two"}},"textAlign":"","columnCount":3,"repeatables":[{"id":1,"text":{"content":{"quill":{"ops":[{"insert":"\u8017\u6642\u4e09\u65e5\uff0c\u5e7e\u7d93\u8271\u8f9b\u5c0f\u5f1f\u5605\u300a\u51ac\u5b63\u9650\u5b9a\u300b\u300c\u5168\u6c11\u4f5c\u66f2\u300d\u6295\u7a3f\u7d42\u65bc\u5b8c\u6210\uff01\n\uff08\u5c0b\u665a\u9304\u97f3\u6709\u5572\u5009\u5352\uff0c\u8acb\u539f\u8ad2\u6211\u4e0d\u6210\u719f\u5605\u5531\u529f\u540c\u8f15\u5fae\u5605\u53e3\u6c34\u8072\u2026  \u771f\u4fc2\u57f7\u5514\u5207\ud83d\ude05\uff09\nread more\u2026\u2026\n"}]}}},"image":{"link":{"tab":true,"link":{"page":{"pageID":"b2570460-bcdf-11ee-974e-7b0074951bdf"},"external":"https:\/\/www.instagram.com\/p\/DSvbBw8k4C2\/"},"type":"external"},"figure":{"name":"cover_art_winter0k.png","width":1890,"height":1890,"source":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/cover_art_winter0k_1766784177.png","altText":"","original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/cover_art_winter0k_1766784177.png","sourceSet":{},"focalPoint":{"x":0.5,"y":0.5},"attribution":{},"cropOptions":null,"positionPoint":{"x":0.5,"y":0.5}},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"\u3010\u51ac\u5b63\u9650\u5b9a - \u7d55\u5c0d\u96f6\u5ea6\u7248 0K Version\u3011"},{"insert":"\n","attributes":{"block":true}}]}},"fontSize":"medium","textStyle":"title"},"button":{"link":{"tab":false,"link":{"page":{"pageID":"b2570460-bcdf-11ee-974e-7b0074951bdf"}},"type":"page"},"label":"view details\n","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}},{"id":4,"text":{"content":{"quill":{"ops":[{"insert":"\ud83c\udf42 \u79cb\u8449\u7de3 Fated \ud83c\udf41\n\n \u6797\u5bb6\u8b19 Terence Lam\n\nPiano Accompaniment Demonstration.\n"}]}}},"image":{"link":{"tab":true,"link":{"external":"https:\/\/www.instagram.com\/p\/DP7S4wzCP8f\/"},"type":"external"},"figure":{"name":"20251018-\u79cb\u8449\u7de3-PNOVER.png","width":1280,"height":720,"source":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/20251018-%E7%A7%8B%E8%91%89%E7%B7%A3-PNOVER_1762726030.png","altText":"","original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/20251018-%E7%A7%8B%E8%91%89%E7%B7%A3-PNOVER_1762726030.png","sourceSet":{},"attribution":{},"cropOptions":null},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"\u3010#\u5f48\u5587\u5f48\u5587\u5582\ud83c\udfb9\u3011"},{"insert":"\n","attributes":{"block":true}}]}},"fontSize":"medium","textStyle":"title"},"button":{"label":"View products","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}},{"id":5,"text":{"content":{"quill":{"ops":[{"insert":"#\u7d42\u65bc\u73fe\u5f62\u4e86\u2026"},{"insert":"\n\n","attributes":{"block":true}},{"insert":"By my side.  Piano Version Demonstration Video!"},{"insert":"\n\n","attributes":{"block":true}},{"insert":"Re-arrangement by me\u270c\ufe0f"},{"insert":"\n","attributes":{"block":true}}]}}},"image":{"link":{"tab":true,"link":{"external":"https:\/\/www.instagram.com\/p\/DM8bsC5TWvN\/"},"type":"external"},"figure":{"name":"20250805-Bymyside_PIAN...1x1.png","width":1890,"height":1890,"source":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/20250805-Bymyside_PIANOVERDEMO_1x1_1754866832.png","altText":"","original":"\/uploads\/b\/1fe3e7459905dc7fecad6e462a68ab32f2b79922abaebf953f7e084aa418244b\/20250805-Bymyside_PIANOVERDEMO_1x1_1754866832.png","sourceSet":{},"attribution":{},"cropOptions":null},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"\u3010#\u5f48\u5587\u5f48\u5587\u5582\ud83c\udfb9\u3011"},{"insert":"\n","attributes":{"block":true}}]}},"fontSize":"medium","textStyle":"title"},"button":{"label":"View products","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}}],"sectionText":{"hidden":false,"content":{"quill":{"ops":[{"insert":"\n","attributes":{"block":true}}]}}},"sectionTitle":{"title":{"quill":{"ops":[{"insert":"instagram feed"},{"insert":"\n","attributes":{"block":true}}]}},"hidden":false}}}},{"id":"cc6a3ea0-f98b-11ef-9a42-236b99c53463","type":"cell","content":{"id":"cc6a3ea1-f98b-11ef-9a42-236b99c53463","type":"block","layout":"text-and-image-2-column","purpose":"button@^1.0.0","properties":{"height":"extra-small","shortID":"tgWaiX","settings":{"texts":{"hidden":true},"images":{"hidden":true},"titles":{"hidden":true},"buttons":{"hidden":false,"presetSize":"small","presetStyle":"secondary"},"secondaryButtons":{"hidden":true}},"textAlign":"","columnCount":3,"repeatables":[{"id":1,"text":{"content":{"quill":{"ops":[{"insert":"\n"}]}}},"image":{"figure":{},"hidden":false},"title":{"tag":"h2","content":{"quill":{"ops":[{"insert":"\n","attributes":{"block":true}}]}},"fontSize":"medium","textStyle":"title"},"button":{"link":{"tab":true,"link":{"page":{"pageID":"f2624da0-2fcd-11f1-8057-a18ed2a3de52"},"external":"https:\/\/www.instagram.com\/404stud1o_"},"type":"external"},"label":"view full instagram feed\n","hidden":true},"callout":{"tag":"h3","hidden":true,"content":"Quality Craftsmanship","fontSize":"medium","textStyle":"title"},"secondaryButton":{"label":"Learn more","hidden":true}}]}}}]}}}}}},"storeInfo":{"merchant_id":"MLYMFV419512F","buyer_customer_accounts_enabled":false,"currency":"GBP","locale":"en_GB","language":"en_GB","syncing_disabled":true,"return_policy":"<p>Returning is not available for all items.<\/p>","shipping_policy":"<p>Shipping is not available for all items, only deliveries in person at MTR stations<em> (for Hong Kong)<\/em> and Underground stations <em>(for London)<\/em> is available.<\/p>","max_donation_amount":4000,"store_mode":"cart","payment_method_support":{"visa":false,"mastercard":false,"amex":false,"discover":false,"jcb":false,"interac":false,"paypal":false,"apple_pay":false,"google_pay":false,"cash_app":false,"square_pay":false},"show_pdp_buy_now_button":true,"allowed_to_sell":true,"accepting_orders":false,"has_payment_processor":true,"is_group_ordering_enabled":false,"product_reviews_enabled":false,"show_on_sale_section":true,"show_low_stock_section":false,"show_out_of_stock_section":true,"shipping_location_ids":["L7W77RMWWPAXQ"],"fulfillment_support":{"delivery":false,"pickup":false,"shipping":false,"dine_in":false,"manual":false,"digital":false},"seller_preferred_fulfillment":"delivery","locations_counts":{"pickup":0,"delivery":0,"dine_in":0,"pickup_or_delivery":0,"brick_and_mortar_fulfillment":0,"shipping":1,"total":1},"has_subscribable_items":false,"has_shippable_product":false,"has_time_based_categories":false,"product_setting_low_stock_threshold":5,"category_hierarchy_root_ids":{"site_category_id":null,"id":null}},"commerceLinks":{"products":{},"categories":{"3":{"site_category_id":"3","name":"\u55ae\u66f2 singles releases","updated_date":"2025-08-13T05:08:17+00:00","permalink":"singles-releases","site_link":"\/shop\/singles-releases\/3"},"4":{"site_category_id":"4","name":"\u8eca\u5e72\u61c9\u63f4\u55ae\u66f2 hins' fan-support singles","updated_date":"2025-08-13T05:08:17+00:00","permalink":"hins-fan-support-singles","site_link":"\/shop\/hins-fan-support-singles\/4"},"2":{"site_category_id":"2","name":"\u793e\u7fa4\u55ae\u66f2 community releases","updated_date":"2025-08-13T05:08:17+00:00","permalink":"cmty-releases","site_link":"\/shop\/cmty-releases\/2"}},"meta":{"pagination":{"products":[],"categories":{"per_page":2500,"current_page":1,"total_pages":1}}}},"autoNavLinks":[{"link":{"page":{"pageID":"f262a350-2fcd-11f1-aa30-0fd5c324c1fa"}},"type":"page","children":[{"link":{"page":{"pageID":"f2659e90-2fcd-11f1-aa21-5b204031d462"}},"type":"page","title":"Demos","children":[],"expanded":true},{"link":{"page":{"pageID":"f263d580-2fcd-11f1-9693-fbb180518960"}},"type":"page","children":[],"expanded":true},{"link":{"page":{"pageID":"f2621c00-2fcd-11f1-bc42-f5efa44db6c1"}},"type":"page","title":"Covers","children":[],"expanded":false},{"link":{"page":{"pageID":"f25f94c0-2fcd-11f1-a644-3bb0bb8a8023"}},"type":"page"}],"expanded":true},{"link":{"page":{"pageID":"f261edf0-2fcd-11f1-a760-3d4c5aaa5e3f"}},"type":"page","title":"Engineering","children":[{"link":{"page":{"pageID":"f25f5100-2fcd-11f1-914d-9d990abd3573"}},"type":"page"},{"link":{"page":{"pageID":"f26137a0-2fcd-11f1-aa1a-0bbf76b009c9"}},"type":"page","title":"Academic Projects","children":[]}],"expanded":true},{"link":{"page":{"pageID":"f2640ee0-2fcd-11f1-b6cf-b334c4c84077"}},"type":"page","children":[],"expanded":true},{"link":{"page":{"pageID":"f2631760-2fcd-11f1-a2fc-5945d6283144"}},"type":"page","children":[]}],"blogPostLinks":{},"featureFlags":{"ecom.website.deprecated-layouts":false,"marketing-enable-drive-repeat-purchase-campaign":true,"ecom.website.facebook-food":true,"ecom.website.theme-export":false,"ecom.website.chamber-via-fastly":true,"ecom.square-online-published-catalog-cache-version":"2026-03-25","ecom.checkout.open_tabs":true,"ecom.website.photo-reviews":true,"ecom.checkout.cmi-sentry-integration":true,"ecom.checkout.cmi.bootstrap-tracking-snowplow":true,"ecom.checkout.cmi.bootstrap-tracking-ga":true,"ecom.website.order-confirmation-page.website-redirect":true,"ecom.checkout.cmi.locale-view-splitting":true,"ecom.checkout.open_tabs_gc_coupon":true,"ecom.cmi-cart":true,"ecom.checkout.cmi.theme-fonts":false,"ecom-fulfillment-api-v-2":false,"ecom.omnichannel-discounts-frontend":true,"ecom.omnichannel-discounts-category-api":false,"ecom-improved-tipping-experience":true,"ecom.splash.loyalty":false,"ecom.website.published-site.datadog-rum":true,"ecom.website.editor.datadog-rum":true,"ecom-website-published-site-datadog-rum-bot-filter":true,"ecom-use-tracking-inventory":false,"ecom.image-controls.width-fix":true,"ecom.gradient-backgrounds":true,"ecom.website.form-fraud-blocking":true,"ecom.website.form-fraud-auto-ban":true,"ecom.website.code-editor":false,"ecom.shopping.pdp-layouts-m1":true,"ecom.chamber.subscriptions":true,"ecom.tuba.subscriptions-paid-shipping-rates":true,"ecom-cko-enhanced-logging":true,"ecom-cko-unified-logging":true,"ecom.shopping.so-coupons-sunset-integrations":true,"ecom.order-online-text-layouts":true,"ecom.appointment-improvements":true,"ecom.appointment-improvements-m2":true,"ecom.tuba.committed-inventory-m1":true,"ecom.splash-improvements":true,"ecom-themes-onboarding":true,"ecom.shopping.featured-categories-paid-layouts":true,"ecom.website.ai-text.short-form":false,"ecom.website.ai-text.long-form":false,"ecom.website.metered-request.override":false,"ecom.website.async-create-theme":false,"ecom.can_use_cart_sharing":true,"ecom.website.ai.editor-prototype":false,"ecom.website.ai.page-seo":false,"ecom.appointment-direct-booking":true,"ecom-service-cutover-fe-request-augmentations":true,"ecom.catalog.so-item-library-deprecation-3":true,"ecom.kiosk-photo-card":true,"ecom.website.system-page.cart":false,"ecom-enable-kiosk-large-catalog-layout":false,"ecom-hide-instagram":true,"ecom-hide-instagram-on-published-sites":false,"ecom-enable-kiosk-item-preloading":true,"ecom-brand-api-sync":true,"ecom.service-cutover.enable-tuba-traffic":true,"ecom-show-order-online":true,"websdk-use-new-afterpay-buttons":false,"ecom-checkout-should-check-is-decouple-checkout":true,"ecom-prime-use-store-info-v29":true,"ecom-checkout-force-pci-compliance":false,"ecom-website-hide-food-beverage-themes":false,"ecom-website-fix-dine-in-location-selection":true,"ecom-combo-slot-include-hidden-items":false},"lightning":{},"datadog":{"publishedSite":{"service":"spi-ecom-square-online-buyer-journey","applicationId":"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee","clientToken":"pubc6e7a7143c494f34f1366112ef7c1e2c","env":"production","rum":{"sampleRate":50,"sessionReplaySampleRate":20,"traceSampleRate":10}}}};
-    </script>
-
-                <script type="html/template" id="tracking-pixel-receipt_page">
-            {storeName} - Thank you for your order.
-
-　Customer Name: {name} - {email}
-　Order Number: {orderid}
-　Transaction Reference: {txid}
-
-Order Details:
-　　{items}  -  {subtotal}
-        </script>
-    
-    <script type="application/javascript" data-cookieconsent="ignore">
-        window.stopSiteLoadingAnimation = () => {
-            const loadingElement = document.querySelector('.loading-view');
-            loadingElement?.remove();
-        };
-    </script>
-
-    
-    <script type="application/javascript" data-cookieconsent="ignore">
-    /**
-     * PCI Compliance Flag
-     *
-     * This flag indicates if scripts have been filtered for PCI compliance (OpenTabs SSO Checkout route).
-     * This value is set only for buyer dashboard/site view to prevent infinite loading loops.
-     *
-     * Do NOT include this file in editor-frame.blade.php as it affects seller dashboard.
-     */
-    window.IS_PCI_SCRIPTS_FILTERED = false;
-</script>
-    <script type="application/javascript" data-cookieconsent="ignore">
-    // used for editor-frame and pub site bootstrap
-    window.APP_ENV = 'production';
-    window.APP_ORIGIN = 'https://square.online';
-    window.APP_URL = 'https://www.weebly.com';
-    window.ASSET_BASE = '/app/website';
-    window.ASSETS_PUBLIC_PATH = 'https://cdn3.editmysite.com/app/website/';
-    window.CMS_API_PATH ='/app/website/cms';
-    window.DEPRECATED_IMAGE_HOST = 'https://images.editor.website';
-    window.FRAME_ORIGIN = 'https://sandbox.square.online';
-    window.GENERATE_GOOGLE_MAP_BASE = 'https://www.editmysite.com';
-    window.IMAGE_HOST = 'https://1fe3e7459905dc7fecad.cdn6.editmysite.com';
-    window.IS_DRAFT = false;
-    window.IS_MAGIC_MIRROR = false;
-    window.IS_THEME_PREVIEW = false;
-    window.IS_ENHANCED_PREVIEW = false;
-    window.DRAFT_ORIGIN = 'https://drafts.editmysite.com';
-    window.PUBLISHED_CMS_API_PREFIX = '/app/cms';
-    window.SENTRY_DSN = 'https://13e49d785d8d4f828038b6136f3b48ba@sentry.io/1263158';
-    window.RELEASE = 'prime-f3c3441';
-    window.URL_BASE = '';
-    window.XSRF_COOKIE_NAME = 'publishedsite-xsrf';
-    window.FASTLY_URL_BASE = 'https://cdn5.editmysite.com';
-    window.SQUARE_WEB_PAYMENTS_SDK = 'https://web.squarecdn.com/v1/square.js'
-    window.PUBLIC_SQUARE_URL_BASE = 'squareup.com';
-    window.PUBLIC_SQUARE_APPTS_URL_BASE = 'app.squareup.com';
-    window.ENABLE_FRONTEND_LOCAL_DEV_CACHE = '';
-    window.GOOGLE_TAG_DEVELOPER_ID = 'developer_id.dOTM2Yj';
-    window.IS_SQUARE_GO = false;
-
-            window.IS_PUBLISHED_MAGIC_MIRROR = false;
-    
-    // state
-    window.SUBDOMAIN_BASE = 'square.site';
-
-</script>
-
-    <!--square-online-snowplow-->
-
-<script data-cookieconsent="statistics" type="text/plain">
-    (function (p, l, o, w, i, n, g) {
-    var id = i + '-script';
-    if (!l.getElementById(i)) {
-        n = l.createElement(o);
-        g = l.getElementsByTagName(o)[0];
-        n.id = id;
-        n.async = 1;
-        n.src = w;
-        g.parentNode.insertBefore(n, g);
-    }
-})(window, document, "script", "https://cdn3.editmysite.com/app/website/static/js/wsnbn/snowday262.js", "snowday");
-</script>
-
-
-<script data-cookieconsent="ignore" data-role="square-online-snowplow">
-
-(function (p, l, o, w, i, n, g) {
-    if (!p[i]) {
-        p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
-        p.GlobalSnowplowNamespace.push(i);
-        p[i] = function () {
-            (p[i].q = p[i].q || []).push(arguments);
-        };
-        p[i].q = p[i].q || [];
-    }
-})(window, document, '', '', "snowday");
-
-var r = [99, 104, 101, 99, 107, 111, 117, 116, 46, 40, 119, 101, 101, 98, 108, 121, 124, 101, 100, 105, 116, 109, 121, 115, 105, 116, 101, 41, 46, 99, 111, 109];
-var snPlObR = function(arr) {
-    var s = '';
-    for (var i = 0 ; i < arr.length ; i++){
-        s = s + String.fromCharCode(arr[i]);
-    }
-    return s;
-};
-var s = snPlObR(r);
-
-var regEx = new RegExp(s);
-
-window._W = {
-    Analytics: {
-        trackers: {
-            wSP: snowday,
-        },
-        user_id: '147668699',
-        site_id: '105989062428052294',
-    },
-};
-
-(function(app_id, ec_hostname, discover_root_domain) {
-    var track = window._W.Analytics.trackers.wSP;
-    if (!track) return;
-    track('newTracker', app_id, ec_hostname, {
-        appId: app_id,
-        post: true,
-        platform: 'web',
-        discoverRootDomain: discover_root_domain,
-        cookieDomain: document.location.hostname,
-        cookieName: '_snow_',
-        contexts: {
-            webPage: true,
-            performanceTiming: true,
-            gaCookies: true
-        },
-        crossDomainLinker: function (linkElement) {
-            return regEx.test(linkElement.href);
-        },
-        respectDoNotTrack: document.cookie.indexOf('gdpr-kb') === -1
-    });
-    track('trackPageView', _W.Analytics.user_id+':'+_W.Analytics.site_id);
-    track('crossDomainLinker', function (linkElement) {
-        return regEx.test(linkElement.href);
-    });
-})(
-    '_wn',
-    'ec.editmysite.com',
-    false
-);
-</script>
-<!--end-square-online-snowplow-->
-
-
-            
+        <link rel="manifest" href="/manifest.webmanifest">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name='apple-mobile-web-app-title' content='404 Studio'>
+        <meta name='theme-color' content='#ff9f3c'>
+        <meta name='msapplication-TileColor' content='#ff9f3c'>
+                <link rel='apple-touch-icon' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=180'>
+                <meta name='msapplication-TileImage' content='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=144'>
+                <link rel='apple-touch-icon' sizes='120x120' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=120'>
+                <link rel='apple-touch-icon' sizes='152x152' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=152'>
+                <link rel='apple-touch-icon' sizes='167x167' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=167'>
+                <link rel='apple-touch-icon' sizes='180x180' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/icon_180x180_ios_NjI3Nz.png?width=180'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=750&height=1334&fit=crop' media='(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1242&height=2208&fit=crop' media='(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1125&height=2436&fit=crop' media='(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=828&height=1792&fit=crop' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1242&height=2688&fit=crop' media='(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1170&height=2532&fit=crop' media='(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1284&height=2778&fit=crop' media='(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1536&height=2048&fit=crop' media='(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1620&height=2160&fit=crop' media='(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1668&height=2224&fit=crop' media='(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=1668&height=2388&fit=crop' media='(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)'>
+                <link rel='apple-touch-startup-image' href='/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/splash_2048x4435_MTAwNj.jpg?width=2048&height=2732&fit=crop' media='(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)'>
         
-    
-    <link rel="stylesheet" href="https://cdn3.editmysite.com/app/website/css/site.80dde82e64cd7e8a0309.css">
-</head>
-<body>
-    <div class="loading-view">
-        <div
-            class="loading-container"
-        >
-            <div
-                class="dot-container"
-            ></div>
-            <div
-                class="dot-container"
-            ></div>
-            <div
-                class="dot-container"
-            ></div>
-        </div>
-    </div>
-    <div id="app"></div>
+        <meta property="og:title" content="Henry L | 404 Studio" />
+                    <meta property="og:site_name" content="404 Studio" />
+                    <meta property="og:description" content="an extraordinarily typical virgo &amp; istp." />
+                    <meta property="og:image" content="https://404stud1o.square.site/uploads/b/e5761de0-8027-11ee-875d-d98ab2565f71/logo_v2_banner.png" />
+                    <meta property="og:url" content="https://404stud1o.square.site" />
+            <meta property="og:type" content="website" />
+        
+        <script data-cookieconsent="ignore">
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+        </script>
 
-                
-        <link rel="stylesheet" type="text/css" href="https://cdn3.editmysite.com/app/checkout/assets/checkout/css/wcko.d01e607a0316a2da0559.css" />
+                <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async="async" data-cookieconsent="statistics, marketing" src="https://www.googletagmanager.com/gtag/js?id=G-WMLXGSBSY0" type="text/plain"> </script>
+
+        <script data-cookieconsent="statistics" type="text/plain">
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            // Note we don't include the gtag config here as it's triggered in PublishedApp.vue
+            // and would otherwise cause double page view events on load
+            gtag('js', new Date());
+            gtag('set', 'developer_id.dOTM2Yj', true)
+        </script>
+
+        <script type="application/javascript" data-cookieconsent="ignore">
+        /**
+         * PCI Compliance Flag
+         *
+         * This flag indicates if scripts have been filtered for PCI compliance (OpenTabs SSO Checkout route).
+         * This value is set only for buyer dashboard/site view to prevent infinite loading loops.
+         *
+         * Do NOT include this file in editor-frame.blade.php as it affects seller dashboard.
+         */
+        window.IS_PCI_SCRIPTS_FILTERED = false;
+    </script>
+
+    <script data-cookieconsent="statistics" type="text/plain">
+        (function (p, l, o, w, i, n, g) {
+        var id = i + '-script';
+        if (!l.getElementById(i)) {
+            n = l.createElement(o);
+            g = l.getElementsByTagName(o)[0];
+            n.id = id;
+            n.async = 1;
+            n.src = w;
+            g.parentNode.insertBefore(n, g);
+        }
+    })(window, document, "script", "https://cdn3.editmysite.com/app/website/static/js/wsnbn/snowday262.js", "snowday");
+    </script>
+
+    <script data-cookieconsent="ignore" data-role="square-online-snowplow">
+
+    (function (p, l, o, w, i, n, g) {
+        if (!p[i]) {
+            p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+            p.GlobalSnowplowNamespace.push(i);
+            p[i] = function () {
+                (p[i].q = p[i].q || []).push(arguments);
+            };
+            p[i].q = p[i].q || [];
+        }
+    })(window, document, '', '', "snowday");
+
+    var r = [99, 104, 101, 99, 107, 111, 117, 116, 46, 40, 119, 101, 101, 98, 108, 121, 124, 101, 100, 105, 116, 109, 121, 115, 105, 116, 101, 41, 46, 99, 111, 109];
+    var snPlObR = function(arr) {
+        var s = '';
+        for (var i = 0 ; i < arr.length ; i++){
+            s = s + String.fromCharCode(arr[i]);
+        }
+        return s;
+    };
+    var s = snPlObR(r);
+
+    var regEx = new RegExp(s);
+
+    window._W = {
+        Analytics: {
+            trackers: {
+                wSP: snowday,
+            },
+            user_id: '147668699',
+            site_id: '105989062428052294',
+        },
+    };
+
+    (function(app_id, ec_hostname, discover_root_domain) {
+        var track = window._W.Analytics.trackers.wSP;
+        if (!track) return;
+        track('newTracker', app_id, ec_hostname, {
+            appId: app_id,
+            post: true,
+            platform: 'web',
+            discoverRootDomain: discover_root_domain,
+            cookieDomain: document.location.hostname,
+            cookieName: '_snow_',
+            contexts: {
+                webPage: true,
+                performanceTiming: true,
+                gaCookies: true
+            },
+            crossDomainLinker: function (linkElement) {
+                return regEx.test(linkElement.href);
+            },
+            respectDoNotTrack: document.cookie.indexOf('gdpr-kb') === -1
+        });
+        track('trackPageView', _W.Analytics.user_id+':'+_W.Analytics.site_id);
+        track('crossDomainLinker', function (linkElement) {
+            return regEx.test(linkElement.href);
+        });
+    })(
+        '_wn',
+        'ec.editmysite.com',
+        false
+    );
+    </script>
+    </head>
+
+    <body>
+        <p>Fat Monkey Productions</p>
     </body>
 </html>
