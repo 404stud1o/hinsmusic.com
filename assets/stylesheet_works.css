@@ -202,7 +202,7 @@ a.header-h1 {
     color: #ffffff;
     background-color: #F8BC7C;
     text-align: left;
-    padding: 8px 0;
+    padding: 16px 8px;
     min-height: 95vh;
 }
 
